@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.tcc": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "regex": "cpp"
+    }
+}
