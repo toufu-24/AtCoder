@@ -15,6 +15,11 @@
         "ostream": "cpp",
         "utility": "cpp",
         "chrono": "cpp",
-        "complex": "cpp"
+        "complex": "cpp",
+        "iomanip": "cpp",
+        "cmath": "cpp",
+        "random": "cpp",
+        "limits": "cpp",
+        "iostream": "cpp"
     }
 }
