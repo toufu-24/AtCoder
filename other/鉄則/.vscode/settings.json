@@ -20,6 +20,9 @@
         "cmath": "cpp",
         "random": "cpp",
         "limits": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "numeric": "cpp",
+        "ranges": "cpp",
+        "span": "cpp"
     }
 }

@@ -19,7 +19,7 @@ int main()
     cin >> N;
     isPrime[0] = false;
     isPrime[1] = false;
-    for (int i = 2; i < size; i ++)
+    for (int i = 2; i < size; i++)
     {
         if (!isPrime[i])
         {
