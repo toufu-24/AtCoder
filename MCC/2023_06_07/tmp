@@ -1,0 +1,80 @@
+        cin >> x_p >> y_p; // ひとつ目の読み込み
+        x_p += ARRAY_SIZE;
+        y_p += ARRAY_SIZE;
+        x_first = x_p;
+        y_first = y_p;
+        curtain[y_p][x_p] = true;
+        for (int i = 1; i < 4; i++)
+        {
+            int x, y;
+            cin >> x >> y;
+            x += ARRAY_SIZE;
+            y += ARRAY_SIZE;
+            curtain[y][x] = true;
+            while (x_p < x)
+            {
+                curtain[y][x_p] = true;
+                x_p++;
+            }
+            int tmp = x;
+            while (tmp < x_p)
+            {
+                curtain[y][tmp] = true;
+                tmp++;
+            }
+
+            while (y_p < y)
+            {
+                curtain[y_p][x] = true;
+                y_p++;
+            }
+            tmp = y;
+            while (tmp < y_p)
+            {
+                curtain[tmp][x] = true;
+                tmp++;
+            }
+            x_p = x;
+            y_p = y;
+        }
+        // 最後の辺
+        if (x_p == x_first)
+        {
+            if (y_p < y_first)
+            {
+                while (y_p < y_first)
+                {
+                    curtain[y_p][x_p] = true;
+                    y_p++;
+                }
+            }
+            else
+            {
+                int tmp = y_first;
+                while (tmp < y_p)
+                {
+                    curtain[tmp][x_p] = true;
+                    tmp++;
+                }
+            }
+        }
+        else
+        {
+            if (x_p < x_first)
+            {
+                while (x_p < x_first)
+                {
+                    curtain[y_first][x_p] = true;
+                    x_p++;
+                }
+            }
+            else
+            {
+                int tmp = x_first;
+                while (tmp < x_p)
+                {
+                    curtain[y_first][tmp] = true;
+                    tmp++;
+                }
+            }
+        }
