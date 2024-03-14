@@ -19,9 +19,15 @@ int32_t main()
     modint::set_mod(M);
     modint A = A_;
     modint ans = 0;
-    for (int i = 0; i < X; i++)
+    // 等比数列の和
+    if (A == 1)
     {
-        ans += A.pow(i);
+        cout << X % M << endl;
+        return 0;
+    }
+    else
+    {
+        ans = (A.pow(X) - 1) / (A - 1);
     }
     cout << ans.val() << endl;
 }
