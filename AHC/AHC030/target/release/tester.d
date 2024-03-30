@@ -1,0 +1,1 @@
+/mnt/c/Users/fjs_0/OneDrive/ドキュメント/programs/AtCoder/AHC/AHC030/target/release/tester: /mnt/c/Users/fjs_0/OneDrive/ドキュメント/programs/AtCoder/AHC/AHC030/src/bin/tester.rs /mnt/c/Users/fjs_0/OneDrive/ドキュメント/programs/AtCoder/AHC/AHC030/src/lib.rs
