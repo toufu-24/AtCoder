@@ -16,6 +16,7 @@
         "ranges": "cpp",
         "regex": "cpp",
         "valarray": "cpp",
-        "all": "cpp"
+        "all": "cpp",
+        "random": "cpp"
     }
 }
