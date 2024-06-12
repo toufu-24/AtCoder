@@ -49,7 +49,7 @@ int32_t main()
     int N, X;
     cin >> N >> X;
     vector<int> size(N + 1);
-    vector<int> patt
+    vector<int> patt(N + 1);
     for (int i = 0; i < N; i++)
     {
         size[i] = burger(i).size();
