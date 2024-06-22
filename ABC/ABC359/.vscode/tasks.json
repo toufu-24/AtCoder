@@ -2,9 +2,10 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: gcc アクティブなファイルのビルド",
-            "command": "/usr/bin/gcc",
+            "label": "C/C++: g++ アクティブなファイルのビルド",
+            "command": "/usr/bin/g++",
             "args": [
+                "-std=c++20",
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
