@@ -21,7 +21,7 @@ using namespace atcoder;
 /// @see
 /// https://zenn.dev/reputeless/books/standard-cpp-for-competitive-programming/viewer/lis
 template <bool Strict, class Type>
-std::vector<int> LIS(const std::vector<Type> &v) {
+std::vector<int> rightLIS(const std::vector<Type> &v) {
     std::vector<Type> dp;
 
     auto it = dp.begin();
@@ -63,6 +63,49 @@ std::vector<int> LIS(const std::vector<Type> &v) {
     return subseq;
 }
 
+template <bool Strict, class Type>
+std::vector<int> leftLIS(const std::vector<Type> &v) {
+    std::vector<Type> dp;
+
+    auto it = dp.begin();
+
+    std::vector<int> positions;
+
+    for (const auto &elem : v) {
+        if constexpr (Strict) {
+            it = std::lower_bound(dp.begin(), dp.end(), elem);
+        } else {
+            it = std::upper_bound(dp.begin(), dp.end(), elem);
+        }
+
+        positions.push_back(static_cast<int>(it - dp.begin()));
+
+        if (it == dp.end()) {
+            dp.push_back(elem);
+        } else {
+            *it = elem;
+        }
+    }
+
+    std::vector<int> subseq(dp.size());
+
+    int si = 0;
+
+    int pi = 0;
+
+    while ((si < static_cast<int>(subseq.size())) && (pi < static_cast<int>(positions.size()))) {
+        if (positions[pi] == si) {
+            subseq[si] = pi;
+
+            ++si;
+        }
+
+        ++pi;
+    }
+
+    return subseq;
+}
+
 int32_t main() {
     int N;
     cin >> N;
@@ -73,7 +116,8 @@ int32_t main() {
     // 10 20 0 1 30 2
     // 0 1 10 20 30 2
     // インデックス
-    auto dp = LIS<true>(A);
+    auto dp = rightLIS<true>(A);
+    auto dp2 = leftLIS<true>(A);
     set<int> used = set<int>(dp.begin(), dp.end());
     int ans = dp.size();
     if (dp[0] != 0) {
@@ -85,6 +129,19 @@ int32_t main() {
         cout << ans << endl;
         return 0;
     }
+    else if (dp2[0] != 0)
+    {
+        ans++;
+        cout << ans << endl;
+        return 0;
+    }
+    else if (dp2[dp2.size() - 1] != N - 1)
+    {
+        ans++;
+        cout << ans << endl;
+        return 0;
+    }
+    
 
     for (int i = 0; i < dp.size() - 1; i++) {
         if (A[dp[i]] + 1 != A[dp[i + 1]]) {
