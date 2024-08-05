@@ -20,6 +20,7 @@
         "valarray": "cpp",
         "iosfwd": "cpp",
         "chrono": "cpp",
-        "functional": "cpp"
+        "functional": "cpp",
+        "ostream": "cpp"
     }
 }
