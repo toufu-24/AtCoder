@@ -1,0 +1,11 @@
+{
+  "files.associations": {
+    "array": "cpp",
+    "chrono": "cpp",
+    "initializer_list": "cpp",
+    "ranges": "cpp",
+    "span": "cpp",
+    "string_view": "cpp",
+    "valarray": "cpp"
+  }
+}
