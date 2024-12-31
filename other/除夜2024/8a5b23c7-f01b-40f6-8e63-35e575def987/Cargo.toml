@@ -1,0 +1,589 @@
+[package]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987"
+version = "0.1.0"
+edition = "2018"
+
+[package.metadata.cargo-compete.bin]
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-0 = { alias = "0", problem = "https://atcoder.jp/contests/abc344/tasks/abc344_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-1 = { alias = "1", problem = "https://atcoder.jp/contests/abc343/tasks/abc343_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-10 = { alias = "10", problem = "https://atcoder.jp/contests/abc346/tasks/abc346_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-100 = { alias = "100", problem = "https://atcoder.jp/contests/abc346/tasks/abc346_c" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-101 = { alias = "101", problem = "https://atcoder.jp/contests/abc378/tasks/abc378_c" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-102 = { alias = "102", problem = "https://atcoder.jp/contests/abc371/tasks/abc371_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-103 = { alias = "103", problem = "https://atcoder.jp/contests/abc381/tasks/abc381_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-104 = { alias = "104", problem = "https://atcoder.jp/contests/abc380/tasks/abc380_c" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-105 = { alias = "105", problem = "https://atcoder.jp/contests/abc361/tasks/abc361_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-106 = { alias = "106", problem = "https://atcoder.jp/contests/abc360/tasks/abc360_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-107 = { alias = "107", problem = "https://atcoder.jp/contests/abc341/tasks/abc341_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-11 = { alias = "11", problem = "https://atcoder.jp/contests/abc379/tasks/abc379_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-12 = { alias = "12", problem = "https://atcoder.jp/contests/abc363/tasks/abc363_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-13 = { alias = "13", problem = "https://atcoder.jp/contests/abc351/tasks/abc351_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-14 = { alias = "14", problem = "https://atcoder.jp/contests/abc339/tasks/abc339_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-15 = { alias = "15", problem = "https://atcoder.jp/contests/abc344/tasks/abc344_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-16 = { alias = "16", problem = "https://atcoder.jp/contests/abc349/tasks/abc349_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-17 = { alias = "17", problem = "https://atcoder.jp/contests/abc367/tasks/abc367_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-18 = { alias = "18", problem = "https://atcoder.jp/contests/abc348/tasks/abc348_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-19 = { alias = "19", problem = "https://atcoder.jp/contests/abc384/tasks/abc384_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-2 = { alias = "2", problem = "https://atcoder.jp/contests/abc335/tasks/abc335_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-20 = { alias = "20", problem = "https://atcoder.jp/contests/abc355/tasks/abc355_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-21 = { alias = "21", problem = "https://atcoder.jp/contests/abc368/tasks/abc368_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-22 = { alias = "22", problem = "https://atcoder.jp/contests/abc336/tasks/abc336_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-23 = { alias = "23", problem = "https://atcoder.jp/contests/abc342/tasks/abc342_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-24 = { alias = "24", problem = "https://atcoder.jp/contests/abc338/tasks/abc338_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-25 = { alias = "25", problem = "https://atcoder.jp/contests/abc382/tasks/abc382_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-26 = { alias = "26", problem = "https://atcoder.jp/contests/abc378/tasks/abc378_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-27 = { alias = "27", problem = "https://atcoder.jp/contests/abc369/tasks/abc369_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-28 = { alias = "28", problem = "https://atcoder.jp/contests/abc374/tasks/abc374_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-29 = { alias = "29", problem = "https://atcoder.jp/contests/abc340/tasks/abc340_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-3 = { alias = "3", problem = "https://atcoder.jp/contests/abc343/tasks/abc343_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-30 = { alias = "30", problem = "https://atcoder.jp/contests/abc373/tasks/abc373_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-31 = { alias = "31", problem = "https://atcoder.jp/contests/abc365/tasks/abc365_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-32 = { alias = "32", problem = "https://atcoder.jp/contests/abc371/tasks/abc371_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-33 = { alias = "33", problem = "https://atcoder.jp/contests/abc339/tasks/abc339_c" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-34 = { alias = "34", problem = "https://atcoder.jp/contests/abc336/tasks/abc336_c" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-35 = { alias = "35", problem = "https://atcoder.jp/contests/abc336/tasks/abc336_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-36 = { alias = "36", problem = "https://atcoder.jp/contests/abc347/tasks/abc347_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-37 = { alias = "37", problem = "https://atcoder.jp/contests/abc362/tasks/abc362_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-38 = { alias = "38", problem = "https://atcoder.jp/contests/abc350/tasks/abc350_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-39 = { alias = "39", problem = "https://atcoder.jp/contests/abc361/tasks/abc361_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-4 = { alias = "4", problem = "https://atcoder.jp/contests/abc372/tasks/abc372_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-40 = { alias = "40", problem = "https://atcoder.jp/contests/abc356/tasks/abc356_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-41 = { alias = "41", problem = "https://atcoder.jp/contests/abc357/tasks/abc357_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-42 = { alias = "42", problem = "https://atcoder.jp/contests/abc359/tasks/abc359_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-43 = { alias = "43", problem = "https://atcoder.jp/contests/abc379/tasks/abc379_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-44 = { alias = "44", problem = "https://atcoder.jp/contests/abc335/tasks/abc335_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-45 = { alias = "45", problem = "https://atcoder.jp/contests/abc354/tasks/abc354_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-46 = { alias = "46", problem = "https://atcoder.jp/contests/abc373/tasks/abc373_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-47 = { alias = "47", problem = "https://atcoder.jp/contests/abc342/tasks/abc342_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-48 = { alias = "48", problem = "https://atcoder.jp/contests/abc347/tasks/abc347_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-49 = { alias = "49", problem = "https://atcoder.jp/contests/abc374/tasks/abc374_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-5 = { alias = "5", problem = "https://atcoder.jp/contests/abc359/tasks/abc359_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-50 = { alias = "50", problem = "https://atcoder.jp/contests/abc353/tasks/abc353_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-51 = { alias = "51", problem = "https://atcoder.jp/contests/abc360/tasks/abc360_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-52 = { alias = "52", problem = "https://atcoder.jp/contests/abc358/tasks/abc358_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-53 = { alias = "53", problem = "https://atcoder.jp/contests/abc358/tasks/abc358_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-54 = { alias = "54", problem = "https://atcoder.jp/contests/abc377/tasks/abc377_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-55 = { alias = "55", problem = "https://atcoder.jp/contests/abc368/tasks/abc368_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-56 = { alias = "56", problem = "https://atcoder.jp/contests/abc365/tasks/abc365_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-57 = { alias = "57", problem = "https://atcoder.jp/contests/abc375/tasks/abc375_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-58 = { alias = "58", problem = "https://atcoder.jp/contests/abc363/tasks/abc363_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-59 = { alias = "59", problem = "https://atcoder.jp/contests/abc345/tasks/abc345_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-6 = { alias = "6", problem = "https://atcoder.jp/contests/abc341/tasks/abc341_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-60 = { alias = "60", problem = "https://atcoder.jp/contests/abc337/tasks/abc337_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-61 = { alias = "61", problem = "https://atcoder.jp/contests/abc343/tasks/abc343_c" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-62 = { alias = "62", problem = "https://atcoder.jp/contests/abc352/tasks/abc352_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-63 = { alias = "63", problem = "https://atcoder.jp/contests/abc376/tasks/abc376_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-64 = { alias = "64", problem = "https://atcoder.jp/contests/abc366/tasks/abc366_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-65 = { alias = "65", problem = "https://atcoder.jp/contests/abc382/tasks/abc382_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-66 = { alias = "66", problem = "https://atcoder.jp/contests/abc357/tasks/abc357_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-67 = { alias = "67", problem = "https://atcoder.jp/contests/abc370/tasks/abc370_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-68 = { alias = "68", problem = "https://atcoder.jp/contests/abc372/tasks/abc372_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-69 = { alias = "69", problem = "https://atcoder.jp/contests/abc367/tasks/abc367_c" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-7 = { alias = "7", problem = "https://atcoder.jp/contests/abc354/tasks/abc354_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-70 = { alias = "70", problem = "https://atcoder.jp/contests/abc385/tasks/abc385_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-71 = { alias = "71", problem = "https://atcoder.jp/contests/abc352/tasks/abc352_c" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-72 = { alias = "72", problem = "https://atcoder.jp/contests/abc348/tasks/abc348_c" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-73 = { alias = "73", problem = "https://atcoder.jp/contests/abc377/tasks/abc377_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-74 = { alias = "74", problem = "https://atcoder.jp/contests/abc338/tasks/abc338_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-75 = { alias = "75", problem = "https://atcoder.jp/contests/abc360/tasks/abc360_c" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-76 = { alias = "76", problem = "https://atcoder.jp/contests/abc353/tasks/abc353_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-77 = { alias = "77", problem = "https://atcoder.jp/contests/abc374/tasks/abc374_c" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-78 = { alias = "78", problem = "https://atcoder.jp/contests/abc369/tasks/abc369_c" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-79 = { alias = "79", problem = "https://atcoder.jp/contests/abc361/tasks/abc361_c" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-8 = { alias = "8", problem = "https://atcoder.jp/contests/abc380/tasks/abc380_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-80 = { alias = "80", problem = "https://atcoder.jp/contests/abc367/tasks/abc367_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-81 = { alias = "81", problem = "https://atcoder.jp/contests/abc366/tasks/abc366_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-82 = { alias = "82", problem = "https://atcoder.jp/contests/abc384/tasks/abc384_c" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-83 = { alias = "83", problem = "https://atcoder.jp/contests/abc380/tasks/abc380_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-84 = { alias = "84", problem = "https://atcoder.jp/contests/abc350/tasks/abc350_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-85 = { alias = "85", problem = "https://atcoder.jp/contests/abc351/tasks/abc351_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-86 = { alias = "86", problem = "https://atcoder.jp/contests/abc381/tasks/abc381_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-87 = { alias = "87", problem = "https://atcoder.jp/contests/abc369/tasks/abc369_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-88 = { alias = "88", problem = "https://atcoder.jp/contests/abc348/tasks/abc348_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-89 = { alias = "89", problem = "https://atcoder.jp/contests/abc383/tasks/abc383_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-9 = { alias = "9", problem = "https://atcoder.jp/contests/abc345/tasks/abc345_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-90 = { alias = "90", problem = "https://atcoder.jp/contests/abc364/tasks/abc364_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-91 = { alias = "91", problem = "https://atcoder.jp/contests/abc358/tasks/abc358_c" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-92 = { alias = "92", problem = "https://atcoder.jp/contests/abc370/tasks/abc370_a" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-93 = { alias = "93", problem = "https://atcoder.jp/contests/abc346/tasks/abc346_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-94 = { alias = "94", problem = "https://atcoder.jp/contests/abc357/tasks/abc357_c" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-95 = { alias = "95", problem = "https://atcoder.jp/contests/abc356/tasks/abc356_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-96 = { alias = "96", problem = "https://atcoder.jp/contests/abc340/tasks/abc340_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-97 = { alias = "97", problem = "https://atcoder.jp/contests/abc364/tasks/abc364_c" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-98 = { alias = "98", problem = "https://atcoder.jp/contests/abc349/tasks/abc349_b" }
+contest8a5b23c7-f01b-40f6-8e63-35e575def987-99 = { alias = "99", problem = "https://atcoder.jp/contests/abc378/tasks/abc378_b" }
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-0"
+path = "src/bin/0.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-1"
+path = "src/bin/1.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-10"
+path = "src/bin/10.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-100"
+path = "src/bin/100.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-101"
+path = "src/bin/101.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-102"
+path = "src/bin/102.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-103"
+path = "src/bin/103.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-104"
+path = "src/bin/104.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-105"
+path = "src/bin/105.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-106"
+path = "src/bin/106.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-107"
+path = "src/bin/107.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-11"
+path = "src/bin/11.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-12"
+path = "src/bin/12.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-13"
+path = "src/bin/13.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-14"
+path = "src/bin/14.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-15"
+path = "src/bin/15.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-16"
+path = "src/bin/16.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-17"
+path = "src/bin/17.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-18"
+path = "src/bin/18.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-19"
+path = "src/bin/19.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-2"
+path = "src/bin/2.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-20"
+path = "src/bin/20.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-21"
+path = "src/bin/21.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-22"
+path = "src/bin/22.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-23"
+path = "src/bin/23.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-24"
+path = "src/bin/24.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-25"
+path = "src/bin/25.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-26"
+path = "src/bin/26.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-27"
+path = "src/bin/27.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-28"
+path = "src/bin/28.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-29"
+path = "src/bin/29.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-3"
+path = "src/bin/3.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-30"
+path = "src/bin/30.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-31"
+path = "src/bin/31.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-32"
+path = "src/bin/32.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-33"
+path = "src/bin/33.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-34"
+path = "src/bin/34.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-35"
+path = "src/bin/35.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-36"
+path = "src/bin/36.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-37"
+path = "src/bin/37.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-38"
+path = "src/bin/38.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-39"
+path = "src/bin/39.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-4"
+path = "src/bin/4.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-40"
+path = "src/bin/40.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-41"
+path = "src/bin/41.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-42"
+path = "src/bin/42.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-43"
+path = "src/bin/43.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-44"
+path = "src/bin/44.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-45"
+path = "src/bin/45.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-46"
+path = "src/bin/46.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-47"
+path = "src/bin/47.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-48"
+path = "src/bin/48.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-49"
+path = "src/bin/49.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-5"
+path = "src/bin/5.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-50"
+path = "src/bin/50.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-51"
+path = "src/bin/51.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-52"
+path = "src/bin/52.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-53"
+path = "src/bin/53.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-54"
+path = "src/bin/54.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-55"
+path = "src/bin/55.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-56"
+path = "src/bin/56.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-57"
+path = "src/bin/57.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-58"
+path = "src/bin/58.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-59"
+path = "src/bin/59.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-6"
+path = "src/bin/6.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-60"
+path = "src/bin/60.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-61"
+path = "src/bin/61.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-62"
+path = "src/bin/62.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-63"
+path = "src/bin/63.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-64"
+path = "src/bin/64.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-65"
+path = "src/bin/65.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-66"
+path = "src/bin/66.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-67"
+path = "src/bin/67.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-68"
+path = "src/bin/68.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-69"
+path = "src/bin/69.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-7"
+path = "src/bin/7.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-70"
+path = "src/bin/70.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-71"
+path = "src/bin/71.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-72"
+path = "src/bin/72.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-73"
+path = "src/bin/73.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-74"
+path = "src/bin/74.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-75"
+path = "src/bin/75.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-76"
+path = "src/bin/76.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-77"
+path = "src/bin/77.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-78"
+path = "src/bin/78.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-79"
+path = "src/bin/79.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-8"
+path = "src/bin/8.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-80"
+path = "src/bin/80.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-81"
+path = "src/bin/81.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-82"
+path = "src/bin/82.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-83"
+path = "src/bin/83.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-84"
+path = "src/bin/84.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-85"
+path = "src/bin/85.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-86"
+path = "src/bin/86.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-87"
+path = "src/bin/87.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-88"
+path = "src/bin/88.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-89"
+path = "src/bin/89.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-9"
+path = "src/bin/9.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-90"
+path = "src/bin/90.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-91"
+path = "src/bin/91.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-92"
+path = "src/bin/92.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-93"
+path = "src/bin/93.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-94"
+path = "src/bin/94.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-95"
+path = "src/bin/95.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-96"
+path = "src/bin/96.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-97"
+path = "src/bin/97.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-98"
+path = "src/bin/98.rs"
+
+[[bin]]
+name = "contest8a5b23c7-f01b-40f6-8e63-35e575def987-99"
+path = "src/bin/99.rs"
+
+[dependencies]
+num = "=0.2.1"
+num-bigint = "=0.2.6"
+num-complex = "=0.2.4"
+num-integer = "=0.1.42"
+num-iter = "=0.1.40"
+num-rational = "=0.2.4"
+num-traits = "=0.2.11"
+num-derive = "=0.3.0"
+ndarray = "=0.13.0"
+nalgebra = "=0.20.0"
+alga = "=0.9.3"
+libm = "=0.2.1"
+rand = { version = "=0.7.3", features = ["small_rng"] }
+getrandom = "=0.1.14"
+rand_chacha = "=0.2.2"
+rand_core = "=0.5.1"
+rand_hc = "=0.2.0"
+rand_pcg = "=0.2.1"
+rand_distr = "=0.2.2"
+petgraph = "=0.5.0"
+indexmap = "=1.3.2"
+regex = "=1.3.6"
+lazy_static = "=1.4.0"
+ordered-float = "=1.0.2"
+ascii = "=1.0.0"
+permutohedron = "=0.2.4"
+superslice = "=1.0.0"
+itertools = "=0.9.0"
+itertools-num = "=0.1.3"
+maplit = "=1.0.2"
+either = "=1.5.3"
+im-rc = "=14.3.0"
+fixedbitset = "=0.2.0"
+bitset-fixed = "=0.1.0"
+proconio = { version = "=0.3.6", features = ["derive"] }
+text_io = "=0.1.8"
+whiteread = "=0.5.0"
+rustc-hash = "=1.1.0"
+smallvec = "=1.2.0"
+
+[dev-dependencies]
