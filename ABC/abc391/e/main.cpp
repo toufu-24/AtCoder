@@ -18,7 +18,7 @@ int32_t main() {
     string a;
     cin >> a;
 
-    auto first_dfs = [&](auto first_dfs, int l, int r) -> vector<int> {
+    auto first_dfs = [&](auto first_dfs, int l, int r) -> int {
         int len = (r - l) / 3;
         if (len == 1) {
             int one = 0, zero = 0;
@@ -29,37 +29,40 @@ int32_t main() {
                     zero++;
                 }
             }
-            vector<int> res(2, 0);
             if (zero > one) {
-                res[0] = 1;
+                return 0;
             } else {
-                res[1] = 1;
+                return 1;
             }
-            return res;
         }
-        vector<int> cnt(2, 0);
+        vector<int> cnt(3, 0);
         assert(l + len * 3 == r);
         for (int i = 0; i < 3; i++) {
-            auto res = first_dfs(first_dfs, l + len * i, l + len * (i + 1));
-            for (int j = 0; j < res.size(); j++) {
-                cnt[j] += res[j];
-            }
+            cnt[i] = first_dfs(first_dfs, l + len * i, l + len * (i + 1));
         }
-        return cnt;
+        int res = 0;
+        SORT(cnt);
+        if (cnt[0] == cnt[1]) {
+            res = cnt[0];
+        }
+        if (cnt[1] == cnt[2]) {
+            res = cnt[1];
+        }
+        return res;
     };
 
     auto first_res = first_dfs(first_dfs, 0, a.size());
-    int first_ans = 0;
-    int need_change = 0;
-    if (first_res[0] > first_res[1]) {
-        first_ans = 0;
-        need_change = (a.size() / 3 + 2 - 1) / 2 - first_res[1];
-    } else {
-        first_ans = 1;
-        need_change = (a.size() / 3 + 2 - 1) / 2 - first_res[0];
+    if (first_res == 1) {
+        for (int i = 0; i < a.size(); i++) {
+            if (a[i] == '1') {
+                a[i] = '0';
+            } else {
+                a[i] = '1';
+            }
+        }
     }
 
-    auto dfs = [&](auto dfs, int l, int r) -> vector<int> {
+    auto dfs = [&](auto dfs, int l, int r) -> int {
         int len = (r - l) / 3;
         if (len == 1) {
             int one = 0, zero = 0;
@@ -73,35 +76,23 @@ int32_t main() {
             if (one < zero) {
                 assert(one <= 1);
                 int have_to = 2 - one;
-                vector<int> res(3, 0);
-                res[have_to] = 1;
-                return res;
+                return have_to;
             }
             if (zero < one) {
-                vector<int> res(3, 0);
-                return res;
+                return 0;
             }
         }
 
-        vector<int> res(3, 0);
+        int res = 0;
         assert(l + len * 3 == r);
+        vector<int> cnt(3, 0);
         for (int i = 0; i < 3; i++) {
-            vector<int> cnt = dfs(dfs, l + len * i, l + len * (i + 1));
-            for (int j = 0; j < cnt.size(); j++) {
-                res[j] += cnt[j];
-            }
+            cnt[i] = dfs(dfs, l + len * i, l + len * (i + 1));
         }
+        res = cnt[0] + cnt[1] + cnt[2] - max({cnt[0], cnt[1], cnt[2]});
         return res;
     };
 
-    auto res = dfs(dfs, 0, a.size());
-    int ans = 0;
-    for (int i = 1; i <= 2; i++) {
-        ans += min(res[i], need_change) * i;
-        need_change -= res[i];
-        if (need_change <= 0) {
-            break;
-        }
-    }
+    auto ans = dfs(dfs, 0, a.size());
     cout << ans << endl;
 }
