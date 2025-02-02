@@ -5,81 +5,61 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define all(v) v.begin(), v.end()
-#define SORT(v) sort(v.begin(), v.end())
-#define RSORT(v) sort(v.rbegin(), v.rend())
-#define REVERSE(v) reverse(v.begin(), v.end())
-#define ll long
-#define ld long double
-
-// 盤面サイズ（すべてのテストケースで N=20）
 constexpr int N = 20;
 
-// 盤面の状態を内部表現に変換．
 enum Piece { EMPTY = 0,
              DEMON = 1,
              BLESSING = 2 };
 
-// 操作情報を表す構造体．
 struct Move {
     char d; // 'U', 'D', 'L', 'R'
     int p;  // 列番号（U,D）または行番号（L,R）
 };
 
-// 初期盤面（グローバル変数）
-vector<vector<int>> initBoard;
+// グローバル変数：固定長の初期盤面
+int initBoard[N][N];
 
-// 入力の文字盤面を読み込み，内部表現にする．
+// 入力を読み込み，固定長盤面に格納
 void readInput() {
-    int _tmp;
-    cin >> _tmp;
-    initBoard.assign(N, vector<int>(N, EMPTY));
+    int dummy;
+    cin >> dummy;
     for (int i = 0; i < N; i++) {
         string s;
         cin >> s;
         for (int j = 0; j < N; j++) {
-            if (s[j] == 'x') {
+            if (s[j] == 'x')
                 initBoard[i][j] = DEMON;
-            } else if (s[j] == 'o') {
+            else if (s[j] == 'o')
                 initBoard[i][j] = BLESSING;
-            } else {
+            else
                 initBoard[i][j] = EMPTY;
-            }
         }
     }
 }
 
-// シミュレーション関数．
-/*
-  candidate: 操作列
-  戻り値： {valid, demonCount, blessingRemoved}
-    valid が true ならば操作列は条件（全ての鬼を盤面外に，福は一切取り除かない）を満たす．
-    demonCount は最終状態に残る鬼の個数．
-    blessingRemoved は盤面から取り除かれた福の個数．
-*/
+// シミュレーション関数
+// candidate: 操作列
+// 戻り値： {valid, demonCount, blessingRemoved}
 tuple<bool, int, int> simulate(const vector<Move> &candidate) {
-    // 盤面をコピー（初期状態）
-    vector<vector<int>> board = initBoard;
-    // 操作ごとにシミュレーション
-    for (auto &mv : candidate) {
+    // 固定長の盤面を initBoard から memcpy でコピー
+    int board[N][N];
+    memcpy(board, initBoard, sizeof(initBoard));
+
+    for (const auto &mv : candidate) {
         if (mv.d == 'L' || mv.d == 'R') {
             int row = mv.p;
-            vector<int> &line = board[row];
+            // 横方向は board[row] が連続領域なので memmove を利用
             if (mv.d == 'L') {
-                // 左方向： line[0] が盤外へ
-                if (line[0] == BLESSING)
-                    return {false, -1, -1}; // 福を取り除いてしまう
-                for (int j = 0; j < N - 1; j++) {
-                    line[j] = line[j + 1];
-                }
-                line[N - 1] = EMPTY;
-            } else { // 'R'
-                if (line[N - 1] == BLESSING)
+                if (board[row][0] == BLESSING)
                     return {false, -1, -1};
-                for (int j = N - 1; j >= 1; j--) {
-                    line[j] = line[j - 1];
-                }
-                line[0] = EMPTY;
+                // board[row][0]～board[row][N-2] を board[row][1]～board[row][N-1] からコピー
+                memmove(&board[row][0], &board[row][1], sizeof(int) * (N - 1));
+                board[row][N - 1] = EMPTY;
+            } else { // 'R'
+                if (board[row][N - 1] == BLESSING)
+                    return {false, -1, -1};
+                memmove(&board[row][1], &board[row][0], sizeof(int) * (N - 1));
+                board[row][0] = EMPTY;
             }
         } else { // 'U' または 'D'
             int col = mv.p;
@@ -100,103 +80,274 @@ tuple<bool, int, int> simulate(const vector<Move> &candidate) {
             }
         }
     }
-    // シミュレーション終了後，盤面をチェック．
-    int demonCount = 0, blessingRemoved = 0;
-    for (int i = 0; i < N; i++) {
-        for (int j = 0; j < N; j++) {
+    int demonCount = 0;
+    // 盤面上の鬼の数をカウント
+    for (int i = 0; i < N; i++)
+        for (int j = 0; j < N; j++)
             if (board[i][j] == DEMON)
                 demonCount++;
-            // ※ 初期盤面にあった福が盤外へ消失していれば，
-            //     そのセルは EMPTY になっているはずなので，福が取り除かれたと判定
-        }
-    }
-    // 盤面外に落ちた駒はシミュレーション内で消えている．
-    // ここでは，福の取り除かれ具合は，初期の福の個数（2N）から盤面上の福の個数を引くことで計算できる．
+
+    // 現在の福の数をカウント
     int blessingOnBoard = 0;
-    for (int i = 0; i < N; i++) {
-        for (int j = 0; j < N; j++) {
+    for (int i = 0; i < N; i++)
+        for (int j = 0; j < N; j++)
             if (board[i][j] == BLESSING)
                 blessingOnBoard++;
-        }
-    }
-    blessingRemoved = 2 * N - blessingOnBoard;
-    // 条件は「全ての鬼を取り除き，福は一切取り除かない」
+    int blessingRemoved = 2 * N - blessingOnBoard;
     bool valid = (demonCount == 0 && blessingRemoved == 0);
     return {valid, demonCount, blessingRemoved};
 }
 
 // 初期解を，安全な方向に対して操作列を生成することで構築する．
+// initBoard を vector<string> に変換してからアルゴリズムを適用する
 vector<Move> constructInitialSolution() {
-    vector<Move> sol;
-    // 盤面上を走査し，鬼（DEMON）の位置について，
-    // ヒントにあるように，上，下，左，右のいずれかが安全である．
-    for (int i = 0; i < N; i++) {
-        for (int j = 0; j < N; j++) {
-            if (initBoard[i][j] == DEMON) {
-                bool safeUp = true, safeDown = true, safeLeft = true, safeRight = true;
-                // 上方向チェック：同じ列 j の上側
-                for (int r = 0; r < i; r++) {
-                    if (initBoard[r][j] == BLESSING) {
-                        safeUp = false;
+    int n = N; // 定数 N（例：20）
+    // initBoard の状態を vector<string> に変換する．
+    // 鬼：'x'，福：'o'，空：'.'
+    vector<string> s_copy(n);
+    for (int i = 0; i < n; i++) {
+        string row;
+        for (int j = 0; j < n; j++) {
+            if (initBoard[i][j] == DEMON)
+                row.push_back('x');
+            else if (initBoard[i][j] == BLESSING)
+                row.push_back('o');
+            else
+                row.push_back('.');
+        }
+        s_copy[i] = row;
+    }
+
+    // 4種類の方針（戦略）ごとに操作列を記録する．
+    vector<vector<Move>> ans(4);
+
+    // 各戦略 hoge = 0,1,2,3 について
+    for (int hoge = 0; hoge < 4; hoge++) {
+        // 作業用盤面 s を初期盤面のコピーに設定
+        vector<string> s = s_copy;
+        // 初期では適当な回数（ここでは 2*n）だけループを回す
+        int oni = 2 * n;
+        while (oni--) {
+            pair<int, int> pos = {-1, -1};
+            // 戦略 hoge に応じて，探索順序を変えて最初に見つかった鬼（'x'）の位置を pos に記録する．
+            if (hoge == 0) {
+                // 上から左順に走査
+                for (int i = 0; i < n; i++) {
+                    bool found = false;
+                    for (int j = 0; j < n; j++) {
+                        if (s[i][j] == 'x') {
+                            pos = {i, j};
+                            found = true;
+                            break;
+                        }
+                    }
+                    if (found)
                         break;
-                    }
                 }
-                // 下方向チェック
-                for (int r = i + 1; r < N; r++) {
-                    if (initBoard[r][j] == BLESSING) {
-                        safeDown = false;
+            } else if (hoge == 1) {
+                // 上から右順に走査
+                for (int i = 0; i < n; i++) {
+                    bool found = false;
+                    for (int j = n - 1; j >= 0; j--) {
+                        if (s[i][j] == 'x') {
+                            pos = {i, j};
+                            found = true;
+                            break;
+                        }
+                    }
+                    if (found)
                         break;
-                    }
                 }
-                // 左方向チェック
-                for (int c = 0; c < j; c++) {
-                    if (initBoard[i][c] == BLESSING) {
-                        safeLeft = false;
+            } else if (hoge == 2) {
+                // 列方向：左から右ではなく，右側の列から上方向に走査（行は上から下）
+                for (int i = n - 1; i >= 0; i--) {
+                    bool found = false;
+                    for (int j = 0; j < n; j++) {
+                        if (s[j][i] == 'x') {
+                            pos = {j, i};
+                            found = true;
+                            break;
+                        }
+                    }
+                    if (found)
                         break;
-                    }
                 }
-                // 右方向チェック
-                for (int c = j + 1; c < N; c++) {
-                    if (initBoard[i][c] == BLESSING) {
-                        safeRight = false;
+            } else if (hoge == 3) {
+                // 列方向：右側の列から下方向に走査
+                for (int i = n - 1; i >= 0; i--) {
+                    bool found = false;
+                    for (int j = n - 1; j >= 0; j--) {
+                        if (s[j][i] == 'x') {
+                            pos = {j, i};
+                            found = true;
+                            break;
+                        }
+                    }
+                    if (found)
                         break;
-                    }
-                }
-                // 安全な方向を優先順位：上， 下， 左， 右
-                if (safeUp) {
-                    // 上方向なら，列 j を (i+1) 回 U，その後 (i+1) 回 D
-                    for (int k = 0; k < i + 1; k++) {
-                        sol.push_back({'U', j});
-                    }
-                    for (int k = 0; k < i + 1; k++) {
-                        sol.push_back({'D', j});
-                    }
-                } else if (safeDown) {
-                    for (int k = 0; k < N - i; k++) {
-                        sol.push_back({'D', j});
-                    }
-                    for (int k = 0; k < N - i; k++) {
-                        sol.push_back({'U', j});
-                    }
-                } else if (safeLeft) {
-                    for (int k = 0; k < j + 1; k++) {
-                        sol.push_back({'L', i});
-                    }
-                    for (int k = 0; k < j + 1; k++) {
-                        sol.push_back({'R', i});
-                    }
-                } else if (safeRight) {
-                    for (int k = 0; k < N - j; k++) {
-                        sol.push_back({'R', i});
-                    }
-                    for (int k = 0; k < N - j; k++) {
-                        sol.push_back({'L', i});
-                    }
                 }
             }
+            // もし盤面に鬼が存在しなければループ終了
+            if (pos.first == -1)
+                break;
+
+            // 4方向（左，右，上，下）の移動可能性と移動回数を調べる
+            // dx, dy の定義：{0,0,-1,1} と { -1, 1, 0, 0 } で，
+            // それぞれ左・右・上・下に対応する．
+            int dx[4] = {0, 0, -1, 1};
+            int dy[4] = {-1, 1, 0, 0};
+            const int INF = 1e9;
+            vector<int> cnt_v(4, INF); // 各方向に動ける回数（障害にぶつかるまで）
+            vector<int> x_cnt_v(4, 0); // 各方向において動かした際に移動する鬼の個数
+            for (int d = 0; d < 4; d++) {
+                bool ok = true;
+                int tmp = 0;
+                int x_cnt = 0;
+                pair<int, int> npos = pos;
+                while (npos.first >= 0 && npos.first < n && npos.second >= 0 &&
+                       npos.second < n) {
+                    if (s[npos.first][npos.second] == 'o') {
+                        ok = false;
+                        break;
+                    }
+                    if (s[npos.first][npos.second] == 'x')
+                        x_cnt++;
+                    npos.first += dx[d];
+                    npos.second += dy[d];
+                    tmp++;
+                }
+                if (ok) {
+                    cnt_v[d] = tmp;
+                    x_cnt_v[d] = x_cnt;
+                }
+            }
+            // 4方向のうち，移動可能（cnt_v[d] != INF）で，x_cnt が最大となる方向を選択
+            // x_cnt の値が同じ場合は，移動回数（cnt_v）が少ない方を優先する．
+            int cnt = INF;
+            int dir = -1;
+            int best_x_cnt = -1;
+            for (int d = 0; d < 4; d++) {
+                if (cnt_v[d] == INF)
+                    continue;
+                if (x_cnt_v[d] > best_x_cnt) {
+                    best_x_cnt = x_cnt_v[d];
+                    cnt = cnt_v[d];
+                    dir = d;
+                } else if (x_cnt_v[d] == best_x_cnt && cnt_v[d] < cnt) {
+                    cnt = cnt_v[d];
+                    dir = d;
+                }
+            }
+            if (dir == -1) {
+                // どの方向にも動かせなければ break する
+                break;
+            }
+
+            // 選んだ方向に対して移動操作を適用し，ans[hoge] に記録する
+            if (dir == 0) {
+                // 左に動く：対象は行 pos.first
+                string new_row = s[pos.first];
+                for (int i = 0; i < cnt; i++) {
+                    // 左シフト：先頭文字を削除し，末尾に '.' を追加
+                    new_row = new_row.substr(1) + ".";
+                    ans[hoge].push_back({'L', pos.first});
+                }
+                s[pos.first] = new_row;
+            } else if (dir == 1) {
+                // 右に動く：対象は行 pos.first
+                string new_row = s[pos.first];
+                for (int i = 0; i < cnt; i++) {
+                    // 右シフト：末尾文字を削除し，先頭に '.' を追加
+                    new_row = "." + new_row.substr(0, n - 1);
+                    ans[hoge].push_back({'R', pos.first});
+                }
+                s[pos.first] = new_row;
+            } else if (dir == 2) {
+                // 上に動く：対象は列 pos.second
+                for (int i = 0; i < cnt; i++) {
+                    for (int j = 0; j < n - 1; j++) {
+                        s[j][pos.second] = s[j + 1][pos.second];
+                    }
+                    s[n - 1][pos.second] = '.';
+                    ans[hoge].push_back({'U', pos.second});
+                }
+            } else if (dir == 3) {
+                // 下に動く：対象は列 pos.second
+                for (int i = 0; i < cnt; i++) {
+                    for (int j = n - 1; j >= 1; j--) {
+                        s[j][pos.second] = s[j - 1][pos.second];
+                    }
+                    s[0][pos.second] = '.';
+                    ans[hoge].push_back({'D', pos.second});
+                }
+            }
+
+            // 現在の盤面に残る鬼の数を数える
+            int oni_cnt = 0;
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
+                    if (s[i][j] == 'x')
+                        oni_cnt++;
+                }
+            }
+            if (oni_cnt == 0)
+                break;
+            oni = oni_cnt; // 次のループ用に鬼の数で更新
+
+            // 【後処理】移動前の状態に戻すため，逆方向に移動する操作を追加する
+            if (dir == 0) {
+                // 左に動いたので右に戻す
+                string new_row = s[pos.first];
+                for (int i = 0; i < cnt; i++) {
+                    new_row = "." + new_row.substr(0, n - 1);
+                    ans[hoge].push_back({'R', pos.first});
+                }
+                s[pos.first] = new_row;
+            } else if (dir == 1) {
+                // 右に動いたので左に戻す
+                string new_row = s[pos.first];
+                for (int i = 0; i < cnt; i++) {
+                    new_row = new_row.substr(1) + ".";
+                    ans[hoge].push_back({'L', pos.first});
+                }
+                s[pos.first] = new_row;
+            } else if (dir == 2) {
+                // 上に動いたので下に戻す
+                for (int i = 0; i < cnt; i++) {
+                    for (int j = n - 1; j >= 1; j--) {
+                        s[j][pos.second] = s[j - 1][pos.second];
+                    }
+                    s[0][pos.second] = '.';
+                    ans[hoge].push_back({'D', pos.second});
+                }
+            } else if (dir == 3) {
+                // 下に動いたので上に戻す
+                for (int i = 0; i < cnt; i++) {
+                    for (int j = 0; j < n - 1; j++) {
+                        s[j][pos.second] = s[j + 1][pos.second];
+                    }
+                    s[n - 1][pos.second] = '.';
+                    ans[hoge].push_back({'U', pos.second});
+                }
+            }
+        } // end while
+    } // end for hoge
+
+    // 4つの戦略のうち，操作数が最小のものを選ぶ
+    int min_cnt = 1e9;
+    int min_idx = -1;
+    for (int i = 0; i < 4; i++) {
+        if (ans[i].empty())
+            continue;
+        if ((int)ans[i].size() < min_cnt) {
+            min_cnt = ans[i].size();
+            min_idx = i;
         }
+        // デバッグ用: cerr << i << " " << ans[i].size() << endl;
     }
-    return sol;
+    if (min_idx == -1)
+        return {}; // もしどの戦略も操作列が生成できなければ空を返す
+    return ans[min_idx];
 }
 
 // ランダムな整数（[l, r] の範囲）を返す
@@ -225,13 +376,15 @@ int32_t main() {
     int bestScore = currSolution.size();
 
     // SA のパラメータ
-    double T0 = 1000.0, T = T0;
-    double TIME_LIMIT = 1.98;
+    constexpr double T0 = 1000.0;
+    double T = T0;
+    constexpr double TIME_LIMIT = 1965;
     int iterations = 0;
     constexpr char dir[4] = {'U', 'D', 'L', 'R'};
 
     // SA ループ：時間制限まで
-    while (iterations % 19000 != 0 || chrono::duration_cast<chrono::milliseconds>(chrono::system_clock::now() - start).count() < TIME_LIMIT * 1000) {
+    chrono::system_clock::time_point prev = chrono::system_clock::now();
+    while (iterations % 20000 != 0 || chrono::duration_cast<chrono::milliseconds>(prev - start).count() < TIME_LIMIT) {
         iterations++;
         // 現在の解から候補解を生成する．
         vector<Move> candidate = currSolution;
@@ -288,7 +441,6 @@ int32_t main() {
         int currScore = currSolution.size();
 
         // 改善なら採用，悪化でも温度に応じた確率で採用
-        // if (candScore < currScore || exp((double)(currScore - candScore) / T) > ((double)rand() / RAND_MAX)) {
         if (candScore < currScore || exp((double)(currScore - candScore) / T) > ((double)randInt(0, RAND_MAX) / RAND_MAX)) {
             currSolution = candidate;
             // 最良解更新
@@ -298,7 +450,10 @@ int32_t main() {
             }
         }
         // 温度の更新（線形減衰）
-        T = T0 * (1.0 - (chrono::duration_cast<chrono::milliseconds>(chrono::system_clock::now() - start).count() / 1000.0) / TIME_LIMIT);
+        if (iterations % 1000 == 0) {
+            prev = chrono::system_clock::now();
+            T = T0 * (1.0 - (chrono::duration_cast<chrono::milliseconds>(prev - start).count()) / TIME_LIMIT);
+        }
     }
 
     // 最良解を出力
