@@ -1,0 +1,9 @@
+[project]
+name = "ahc044"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "ortools>=9.12.4544",
+]
