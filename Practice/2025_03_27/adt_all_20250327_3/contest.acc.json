@@ -1,0 +1,108 @@
+{
+  "contest": {
+    "id": "adt_all_20250327_3",
+    "title": "AtCoder Daily Training ALL 2025/03/27 20:30start",
+    "url": "https://atcoder.jp/contests/adt_all_20250327_3"
+  },
+  "tasks": [
+    {
+      "id": "abc269_a",
+      "label": "A",
+      "title": "Anyway Takahashi",
+      "url": "https://atcoder.jp/contests/adt_all_20250327_3/tasks/abc269_a",
+      "directory": {
+        "path": "a",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc228_a",
+      "label": "B",
+      "title": "On and Off",
+      "url": "https://atcoder.jp/contests/adt_all_20250327_3/tasks/abc228_a",
+      "directory": {
+        "path": "b",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc240_b",
+      "label": "C",
+      "title": "Count Distinct Integers",
+      "url": "https://atcoder.jp/contests/adt_all_20250327_3/tasks/abc240_b",
+      "directory": {
+        "path": "c",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc334_b",
+      "label": "D",
+      "title": "Christmas Trees",
+      "url": "https://atcoder.jp/contests/adt_all_20250327_3/tasks/abc334_b",
+      "directory": {
+        "path": "d",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc349_c",
+      "label": "E",
+      "title": "Airport Code",
+      "url": "https://atcoder.jp/contests/adt_all_20250327_3/tasks/abc349_c",
+      "directory": {
+        "path": "e",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc375_c",
+      "label": "F",
+      "title": "Spiral Rotation",
+      "url": "https://atcoder.jp/contests/adt_all_20250327_3/tasks/abc375_c",
+      "directory": {
+        "path": "f",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc357_d",
+      "label": "G",
+      "title": "88888888",
+      "url": "https://atcoder.jp/contests/adt_all_20250327_3/tasks/abc357_d",
+      "directory": {
+        "path": "g",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc369_e",
+      "label": "H",
+      "title": "Sightseeing Tour ",
+      "url": "https://atcoder.jp/contests/adt_all_20250327_3/tasks/abc369_e",
+      "directory": {
+        "path": "h",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    },
+    {
+      "id": "abc236_f",
+      "label": "I",
+      "title": "Spices",
+      "url": "https://atcoder.jp/contests/adt_all_20250327_3/tasks/abc236_f",
+      "directory": {
+        "path": "i",
+        "testdir": "test",
+        "submit": "main.cpp"
+      }
+    }
+  ]
+}
