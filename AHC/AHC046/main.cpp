@@ -275,55 +275,9 @@ int main() {
         ci = gi;
         cj = gj;
     }
-
-    // シミュレーションしてぶつからないブロックを除去
-    // 操作列からAを除去
-    block.clear();
-    vector<vector<bool>> block2(N, vector<bool>(N, false));
-    int ni = pts[0].first, nj = pts[0].second;
-    for (int i = 0; i < (int)act.size(); i += 2) {
-        if (act[i] == 'M') {
-            for (int d = 0; d < 4; d++)
-                if (dch[d] == act[i + 1]) {
-                    ni += di[d];
-                    nj += dj[d];
-                    break;
-                }
-        } else if (act[i] == 'S') {
-            while (inb(ni + di[act[i + 1]], nj + dj[act[i + 1]]) && !block[ni + di[act[i + 1]]][nj + dj[act[i + 1]]]) {
-                ni += di[act[i + 1]];
-                nj += dj[act[i + 1]];
-            }
-            if (inb(ni, nj) && block[ni][nj]) {
-                block2[ni][nj] = true;
-            }
-        } else {
-            block[ni + di[act[i + 1]]][nj + dj[act[i + 1]]] = true;
-        }
-    }
-    vector<char> act2;
-    for (int i = 0; i < (int)act.size(); i += 2) {
-        if (act[i] == 'A') {
-            int ni = pts[0].first, nj = pts[0].second;
-            for (int d = 0; d < 4; d++)
-                if (dch[d] == act[i + 1]) {
-                    ni += di[d];
-                    nj += dj[d];
-                    break;
-                }
-            if (inb(ni, nj) && block2[ni][nj]) {
-                act2.push_back(act[i]);
-                act2.push_back(act[i + 1]);
-            }
-        } else {
-            act2.push_back(act[i]);
-            act2.push_back(act[i + 1]);
-        }
-    }
-
     // 出力
-    for (int i = 0; i < (int)act2.size(); i += 2) {
-        cout << act2[i] << ' ' << act2[i + 1] << '\n';
+    for (int i = 0; i < (int)act.size(); i += 2) {
+        cout << act[i] << ' ' << act[i + 1] << '\n';
     }
     return 0;
 }
