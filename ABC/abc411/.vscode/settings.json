@@ -1,0 +1,17 @@
+{
+  "files.associations": {
+    "ostream": "cpp",
+    "array": "cpp",
+    "deque": "cpp",
+    "list": "cpp",
+    "string": "cpp",
+    "vector": "cpp",
+    "string_view": "cpp",
+    "flat_map": "cpp",
+    "flat_set": "cpp",
+    "span": "cpp",
+    "stacktrace": "cpp",
+    "map": "cpp",
+    "set": "cpp"
+  }
+}
