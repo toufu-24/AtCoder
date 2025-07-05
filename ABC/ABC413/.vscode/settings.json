@@ -1,0 +1,9 @@
+{
+  "files.associations": {
+    "ostream": "cpp",
+    "random": "cpp",
+    "chrono": "cpp",
+    "regex": "cpp",
+    "tuple": "cpp"
+  }
+}
