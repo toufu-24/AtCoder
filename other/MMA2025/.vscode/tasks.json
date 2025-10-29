@@ -1,0 +1,24 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build (g++-14 current file)",
+            "type": "shell",
+            "command": "/opt/homebrew/bin/g++-14",
+            "args": [
+                "-g",
+                "-O0",
+                "-std=c++20",
+                "-Wall",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Compile current file with g++-14"
+        }
+    ]
+}
