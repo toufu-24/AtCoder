@@ -1,0 +1,2164 @@
+<html><body><svg height="610" id="vis" style="background-color:white" viewBox="-5 -5 610 610" width="610" xmlns="http://www.w3.org/2000/svg">
+<style>
+text {text-anchor: middle;dominant-baseline: central;}
+</style>
+<symbol id="flag" viewBox="0 0 24 24">
+<path d="M18.383 4.318c-.374-.155-.804-.069-1.09.217-1.264 1.263-3.321 1.264-4.586 0-2.045-2.043-5.37-2.043-7.414 0-.188.187-.293.442-.293.707v13c0 .552.447 1 1 1s1-.448 1-1v-4.553c1.271-.997 3.121-.911 4.293.26 2.045 2.043 5.371 2.043 7.414 0 .188-.188.293-.442.293-.707v-8c0-.405-.244-.769-.617-.924z"/>
+</symbol>
+<symbol id="robot" viewBox="0 0 512 512">
+<rect x="245.33" y="15.938" style="fill:#CCD1D9;" width="21.344" height="84.19"/>
+<g>
+	<path style="fill:#434A54;" d="M74.672,309.344V416c0,5.891,4.766,10.672,10.656,10.672S96,421.891,96,416V309.344H74.672z"/>
+	<path style="fill:#434A54;" d="M416,309.344v106.328c0,5.891,4.781,10.672,10.672,10.672s10.656-4.781,10.656-10.672V309.344H416z"
+		/>
+</g>
+<g>
+	<path style="fill:#CCD1D9;" d="M85.328,234.672h71.109V320H85.328c-23.562,0-42.656-19.094-42.656-42.656
+		C42.672,253.766,61.766,234.672,85.328,234.672z"/>
+	<path style="fill:#CCD1D9;" d="M426.672,234.672h-71.109V320h71.109c23.562,0,42.656-19.094,42.656-42.656
+		C469.328,253.766,450.234,234.672,426.672,234.672z"/>
+</g>
+<circle style="fill:#434A54;" cx="256" cy="426.67" r="85.33"/>
+<path style="fill:#E6E9ED;" d="M405.328,245.344C405.328,162.859,338.469,96,256,96s-149.328,66.859-149.328,149.344V448
+	c0,11.781,9.547,21.344,21.328,21.344h256c11.781,0,21.328-9.562,21.328-21.344V245.344L405.328,245.344z"/>
+<path style="fill:#AAB2BD;" d="M106.672,245.344V256h298.656v-10.656l0,0c0-3.594-0.125-7.156-0.375-10.672H107.047
+	C106.797,238.188,106.672,241.75,106.672,245.344z"/>
+<circle style="fill:#E6E9ED;" cx="256" cy="32" r="32"/>
+<path style="fill:#A0D468;" d="M320,309.344c0,5.891-4.781,10.656-10.672,10.656s-10.656-4.766-10.656-10.656
+	s4.766-10.672,10.656-10.672S320,303.453,320,309.344z"/>
+<path style="fill:#434A54;" d="M218.453,181.344c0,5.891-4.781,10.656-10.672,10.656s-10.672-4.766-10.672-10.656
+	s4.781-10.672,10.672-10.672S218.453,175.453,218.453,181.344z"/>
+<path style="fill:#ED5565;" d="M362.672,309.344c0,5.891-4.781,10.656-10.672,10.656s-10.672-4.766-10.672-10.656
+	s4.781-10.672,10.672-10.672S362.672,303.453,362.672,309.344z"/>
+<g>
+	<path style="fill:#434A54;" d="M303.781,181.344c0,5.891-4.781,10.656-10.672,10.656s-10.656-4.766-10.656-10.656
+		s4.766-10.672,10.656-10.672S303.781,175.453,303.781,181.344z"/>
+	<path style="fill:#434A54;" d="M202.672,298.672H160c-5.891,0-10.672,4.781-10.672,10.672S154.109,320,160,320h42.672
+		c5.891,0,10.656-4.766,10.656-10.656S208.562,298.672,202.672,298.672z"/>
+</g>
+</symbol>
+<g>
+<title>(0, 0)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="0" y="0"/>
+</g>
+<g>
+<title>(0, 1)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="30" y="0"/>
+</g>
+<g>
+<title>(0, 2)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="60" y="0"/>
+</g>
+<g>
+<title>(0, 3)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="90" y="0"/>
+</g>
+<g>
+<title>(0, 4)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="120" y="0"/>
+</g>
+<g>
+<title>(0, 5)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="150" y="0"/>
+</g>
+<g>
+<title>(0, 6)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="180" y="0"/>
+</g>
+<g>
+<title>(0, 7)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="210" y="0"/>
+</g>
+<g>
+<title>(0, 8)
+c = 0</title>
+<rect fill="#1e90ff" height="30" width="30" x="240" y="0"/>
+</g>
+<g>
+<title>(0, 9)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="270" y="0"/>
+</g>
+<g>
+<title>(0, 10)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="300" y="0"/>
+</g>
+<g>
+<title>(0, 11)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="330" y="0"/>
+</g>
+<g>
+<title>(0, 12)
+c = 0</title>
+<rect fill="#1e90ff" height="30" width="30" x="360" y="0"/>
+</g>
+<g>
+<title>(0, 13)
+c = 0</title>
+<rect fill="#1e90ff" height="30" width="30" x="390" y="0"/>
+</g>
+<g>
+<title>(0, 14)
+c = 0</title>
+<rect fill="#1e90ff" height="30" width="30" x="420" y="0"/>
+</g>
+<g>
+<title>(0, 15)
+c = 0</title>
+<rect fill="#1e90ff" height="30" width="30" x="450" y="0"/>
+</g>
+<g>
+<title>(0, 16)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="480" y="0"/>
+</g>
+<g>
+<title>(0, 17)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="510" y="0"/>
+</g>
+<g>
+<title>(0, 18)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="540" y="0"/>
+</g>
+<g>
+<title>(0, 19)
+c = 0</title>
+<rect fill="#1e90ff" height="30" width="30" x="570" y="0"/>
+</g>
+<g>
+<title>(1, 0)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="0" y="30"/>
+</g>
+<g>
+<title>(1, 1)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="30" y="30"/>
+</g>
+<g>
+<title>(1, 2)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="60" y="30"/>
+</g>
+<g>
+<title>(1, 3)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="90" y="30"/>
+</g>
+<g>
+<title>(1, 4)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="120" y="30"/>
+</g>
+<g>
+<title>(1, 5)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="150" y="30"/>
+</g>
+<g>
+<title>(1, 6)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="180" y="30"/>
+</g>
+<g>
+<title>(1, 7)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="210" y="30"/>
+</g>
+<g>
+<title>(1, 8)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="240" y="30"/>
+</g>
+<g>
+<title>(1, 9)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="270" y="30"/>
+</g>
+<g>
+<title>(1, 10)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="300" y="30"/>
+</g>
+<g>
+<title>(1, 11)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="330" y="30"/>
+</g>
+<g>
+<title>(1, 12)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="360" y="30"/>
+</g>
+<g>
+<title>(1, 13)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="390" y="30"/>
+</g>
+<g>
+<title>(1, 14)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="420" y="30"/>
+</g>
+<g>
+<title>(1, 15)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="450" y="30"/>
+</g>
+<g>
+<title>(1, 16)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="480" y="30"/>
+</g>
+<g>
+<title>(1, 17)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="510" y="30"/>
+</g>
+<g>
+<title>(1, 18)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="540" y="30"/>
+</g>
+<g>
+<title>(1, 19)
+c = 0</title>
+<rect fill="#1e90ff" height="30" width="30" x="570" y="30"/>
+</g>
+<g>
+<title>(2, 0)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="0" y="60"/>
+</g>
+<g>
+<title>(2, 1)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="30" y="60"/>
+</g>
+<g>
+<title>(2, 2)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="60" y="60"/>
+</g>
+<g>
+<title>(2, 3)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="90" y="60"/>
+</g>
+<g>
+<title>(2, 4)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="120" y="60"/>
+</g>
+<g>
+<title>(2, 5)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="150" y="60"/>
+</g>
+<g>
+<title>(2, 6)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="180" y="60"/>
+</g>
+<g>
+<title>(2, 7)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="210" y="60"/>
+</g>
+<g>
+<title>(2, 8)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="240" y="60"/>
+</g>
+<g>
+<title>(2, 9)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="270" y="60"/>
+</g>
+<g>
+<title>(2, 10)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="300" y="60"/>
+</g>
+<g>
+<title>(2, 11)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="330" y="60"/>
+</g>
+<g>
+<title>(2, 12)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="360" y="60"/>
+</g>
+<g>
+<title>(2, 13)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="390" y="60"/>
+</g>
+<g>
+<title>(2, 14)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="420" y="60"/>
+</g>
+<g>
+<title>(2, 15)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="450" y="60"/>
+</g>
+<g>
+<title>(2, 16)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="480" y="60"/>
+</g>
+<g>
+<title>(2, 17)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="510" y="60"/>
+</g>
+<g>
+<title>(2, 18)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="540" y="60"/>
+</g>
+<g>
+<title>(2, 19)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="570" y="60"/>
+</g>
+<g>
+<title>(3, 0)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="0" y="90"/>
+</g>
+<g>
+<title>(3, 1)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="30" y="90"/>
+</g>
+<g>
+<title>(3, 2)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="60" y="90"/>
+</g>
+<g>
+<title>(3, 3)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="90" y="90"/>
+</g>
+<g>
+<title>(3, 4)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="120" y="90"/>
+</g>
+<g>
+<title>(3, 5)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="150" y="90"/>
+</g>
+<g>
+<title>(3, 6)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="180" y="90"/>
+</g>
+<g>
+<title>(3, 7)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="210" y="90"/>
+</g>
+<g>
+<title>(3, 8)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="240" y="90"/>
+</g>
+<g>
+<title>(3, 9)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="270" y="90"/>
+</g>
+<g>
+<title>(3, 10)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="300" y="90"/>
+</g>
+<g>
+<title>(3, 11)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="330" y="90"/>
+</g>
+<g>
+<title>(3, 12)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="360" y="90"/>
+</g>
+<g>
+<title>(3, 13)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="390" y="90"/>
+</g>
+<g>
+<title>(3, 14)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="420" y="90"/>
+</g>
+<g>
+<title>(3, 15)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="450" y="90"/>
+</g>
+<g>
+<title>(3, 16)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="480" y="90"/>
+</g>
+<g>
+<title>(3, 17)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="510" y="90"/>
+</g>
+<g>
+<title>(3, 18)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="540" y="90"/>
+</g>
+<g>
+<title>(3, 19)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="570" y="90"/>
+</g>
+<g>
+<title>(4, 0)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="0" y="120"/>
+</g>
+<g>
+<title>(4, 1)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="30" y="120"/>
+</g>
+<g>
+<title>(4, 2)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="60" y="120"/>
+</g>
+<g>
+<title>(4, 3)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="90" y="120"/>
+</g>
+<g>
+<title>(4, 4)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="120" y="120"/>
+</g>
+<g>
+<title>(4, 5)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="150" y="120"/>
+</g>
+<g>
+<title>(4, 6)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="180" y="120"/>
+</g>
+<g>
+<title>(4, 7)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="210" y="120"/>
+</g>
+<g>
+<title>(4, 8)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="240" y="120"/>
+</g>
+<g>
+<title>(4, 9)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="270" y="120"/>
+</g>
+<g>
+<title>(4, 10)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="300" y="120"/>
+</g>
+<g>
+<title>(4, 11)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="330" y="120"/>
+</g>
+<g>
+<title>(4, 12)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="360" y="120"/>
+</g>
+<g>
+<title>(4, 13)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="390" y="120"/>
+</g>
+<g>
+<title>(4, 14)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="420" y="120"/>
+</g>
+<g>
+<title>(4, 15)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="450" y="120"/>
+</g>
+<g>
+<title>(4, 16)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="480" y="120"/>
+</g>
+<g>
+<title>(4, 17)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="510" y="120"/>
+</g>
+<g>
+<title>(4, 18)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="540" y="120"/>
+</g>
+<g>
+<title>(4, 19)
+c = 0</title>
+<rect fill="#1e90ff" height="30" width="30" x="570" y="120"/>
+</g>
+<g>
+<title>(5, 0)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="0" y="150"/>
+</g>
+<g>
+<title>(5, 1)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="30" y="150"/>
+</g>
+<g>
+<title>(5, 2)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="60" y="150"/>
+</g>
+<g>
+<title>(5, 3)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="90" y="150"/>
+</g>
+<g>
+<title>(5, 4)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="120" y="150"/>
+</g>
+<g>
+<title>(5, 5)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="150" y="150"/>
+</g>
+<g>
+<title>(5, 6)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="180" y="150"/>
+</g>
+<g>
+<title>(5, 7)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="210" y="150"/>
+</g>
+<g>
+<title>(5, 8)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="240" y="150"/>
+</g>
+<g>
+<title>(5, 9)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="270" y="150"/>
+</g>
+<g>
+<title>(5, 10)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="300" y="150"/>
+</g>
+<g>
+<title>(5, 11)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="330" y="150"/>
+</g>
+<g>
+<title>(5, 12)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="360" y="150"/>
+</g>
+<g>
+<title>(5, 13)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="390" y="150"/>
+</g>
+<g>
+<title>(5, 14)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="420" y="150"/>
+</g>
+<g>
+<title>(5, 15)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="450" y="150"/>
+</g>
+<g>
+<title>(5, 16)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="480" y="150"/>
+</g>
+<g>
+<title>(5, 17)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="510" y="150"/>
+</g>
+<g>
+<title>(5, 18)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="540" y="150"/>
+</g>
+<g>
+<title>(5, 19)
+c = 0</title>
+<rect fill="#1e90ff" height="30" width="30" x="570" y="150"/>
+</g>
+<g>
+<title>(6, 0)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="0" y="180"/>
+</g>
+<g>
+<title>(6, 1)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="30" y="180"/>
+</g>
+<g>
+<title>(6, 2)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="60" y="180"/>
+</g>
+<g>
+<title>(6, 3)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="90" y="180"/>
+</g>
+<g>
+<title>(6, 4)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="120" y="180"/>
+</g>
+<g>
+<title>(6, 5)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="150" y="180"/>
+</g>
+<g>
+<title>(6, 6)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="180" y="180"/>
+</g>
+<g>
+<title>(6, 7)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="210" y="180"/>
+</g>
+<g>
+<title>(6, 8)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="240" y="180"/>
+</g>
+<g>
+<title>(6, 9)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="270" y="180"/>
+</g>
+<g>
+<title>(6, 10)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="300" y="180"/>
+</g>
+<g>
+<title>(6, 11)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="330" y="180"/>
+</g>
+<g>
+<title>(6, 12)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="360" y="180"/>
+</g>
+<g>
+<title>(6, 13)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="390" y="180"/>
+</g>
+<g>
+<title>(6, 14)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="420" y="180"/>
+</g>
+<g>
+<title>(6, 15)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="450" y="180"/>
+</g>
+<g>
+<title>(6, 16)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="480" y="180"/>
+</g>
+<g>
+<title>(6, 17)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="510" y="180"/>
+</g>
+<g>
+<title>(6, 18)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="540" y="180"/>
+</g>
+<g>
+<title>(6, 19)
+c = 0</title>
+<rect fill="#1e90ff" height="30" width="30" x="570" y="180"/>
+</g>
+<g>
+<title>(7, 0)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="0" y="210"/>
+</g>
+<g>
+<title>(7, 1)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="30" y="210"/>
+</g>
+<g>
+<title>(7, 2)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="60" y="210"/>
+</g>
+<g>
+<title>(7, 3)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="90" y="210"/>
+</g>
+<g>
+<title>(7, 4)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="120" y="210"/>
+</g>
+<g>
+<title>(7, 5)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="150" y="210"/>
+</g>
+<g>
+<title>(7, 6)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="180" y="210"/>
+</g>
+<g>
+<title>(7, 7)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="210" y="210"/>
+</g>
+<g>
+<title>(7, 8)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="240" y="210"/>
+</g>
+<g>
+<title>(7, 9)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="270" y="210"/>
+</g>
+<g>
+<title>(7, 10)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="300" y="210"/>
+</g>
+<g>
+<title>(7, 11)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="330" y="210"/>
+</g>
+<g>
+<title>(7, 12)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="360" y="210"/>
+</g>
+<g>
+<title>(7, 13)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="390" y="210"/>
+</g>
+<g>
+<title>(7, 14)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="420" y="210"/>
+</g>
+<g>
+<title>(7, 15)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="450" y="210"/>
+</g>
+<g>
+<title>(7, 16)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="480" y="210"/>
+</g>
+<g>
+<title>(7, 17)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="510" y="210"/>
+</g>
+<g>
+<title>(7, 18)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="540" y="210"/>
+</g>
+<g>
+<title>(7, 19)
+c = 0</title>
+<rect fill="#1e90ff" height="30" width="30" x="570" y="210"/>
+</g>
+<g>
+<title>(8, 0)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="0" y="240"/>
+</g>
+<g>
+<title>(8, 1)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="30" y="240"/>
+</g>
+<g>
+<title>(8, 2)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="60" y="240"/>
+</g>
+<g>
+<title>(8, 3)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="90" y="240"/>
+</g>
+<g>
+<title>(8, 4)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="120" y="240"/>
+</g>
+<g>
+<title>(8, 5)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="150" y="240"/>
+</g>
+<g>
+<title>(8, 6)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="180" y="240"/>
+</g>
+<g>
+<title>(8, 7)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="210" y="240"/>
+</g>
+<g>
+<title>(8, 8)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="240" y="240"/>
+</g>
+<g>
+<title>(8, 9)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="270" y="240"/>
+</g>
+<g>
+<title>(8, 10)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="300" y="240"/>
+</g>
+<g>
+<title>(8, 11)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="330" y="240"/>
+</g>
+<g>
+<title>(8, 12)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="360" y="240"/>
+</g>
+<g>
+<title>(8, 13)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="390" y="240"/>
+</g>
+<g>
+<title>(8, 14)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="420" y="240"/>
+</g>
+<g>
+<title>(8, 15)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="450" y="240"/>
+</g>
+<g>
+<title>(8, 16)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="480" y="240"/>
+</g>
+<g>
+<title>(8, 17)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="510" y="240"/>
+</g>
+<g>
+<title>(8, 18)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="540" y="240"/>
+</g>
+<g>
+<title>(8, 19)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="570" y="240"/>
+</g>
+<g>
+<title>(9, 0)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="0" y="270"/>
+</g>
+<g>
+<title>(9, 1)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="30" y="270"/>
+</g>
+<g>
+<title>(9, 2)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="60" y="270"/>
+</g>
+<g>
+<title>(9, 3)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="90" y="270"/>
+</g>
+<g>
+<title>(9, 4)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="120" y="270"/>
+</g>
+<g>
+<title>(9, 5)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="150" y="270"/>
+</g>
+<g>
+<title>(9, 6)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="180" y="270"/>
+</g>
+<g>
+<title>(9, 7)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="210" y="270"/>
+</g>
+<g>
+<title>(9, 8)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="240" y="270"/>
+</g>
+<g>
+<title>(9, 9)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="270" y="270"/>
+</g>
+<g>
+<title>(9, 10)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="300" y="270"/>
+</g>
+<g>
+<title>(9, 11)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="330" y="270"/>
+</g>
+<g>
+<title>(9, 12)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="360" y="270"/>
+</g>
+<g>
+<title>(9, 13)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="390" y="270"/>
+</g>
+<g>
+<title>(9, 14)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="420" y="270"/>
+</g>
+<g>
+<title>(9, 15)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="450" y="270"/>
+</g>
+<g>
+<title>(9, 16)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="480" y="270"/>
+</g>
+<g>
+<title>(9, 17)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="510" y="270"/>
+</g>
+<g>
+<title>(9, 18)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="540" y="270"/>
+</g>
+<g>
+<title>(9, 19)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="570" y="270"/>
+</g>
+<g>
+<title>(10, 0)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="0" y="300"/>
+</g>
+<g>
+<title>(10, 1)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="30" y="300"/>
+</g>
+<g>
+<title>(10, 2)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="60" y="300"/>
+</g>
+<g>
+<title>(10, 3)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="90" y="300"/>
+</g>
+<g>
+<title>(10, 4)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="120" y="300"/>
+</g>
+<g>
+<title>(10, 5)
+c = 5</title>
+<rect fill="#da6939" height="30" width="30" x="150" y="300"/>
+</g>
+<g>
+<title>(10, 6)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="180" y="300"/>
+</g>
+<g>
+<title>(10, 7)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="210" y="300"/>
+</g>
+<g>
+<title>(10, 8)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="240" y="300"/>
+</g>
+<g>
+<title>(10, 9)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="270" y="300"/>
+</g>
+<g>
+<title>(10, 10)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="300" y="300"/>
+</g>
+<g>
+<title>(10, 11)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="330" y="300"/>
+</g>
+<g>
+<title>(10, 12)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="360" y="300"/>
+</g>
+<g>
+<title>(10, 13)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="390" y="300"/>
+</g>
+<g>
+<title>(10, 14)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="420" y="300"/>
+</g>
+<g>
+<title>(10, 15)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="450" y="300"/>
+</g>
+<g>
+<title>(10, 16)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="480" y="300"/>
+</g>
+<g>
+<title>(10, 17)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="510" y="300"/>
+</g>
+<g>
+<title>(10, 18)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="540" y="300"/>
+</g>
+<g>
+<title>(10, 19)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="570" y="300"/>
+</g>
+<g>
+<title>(11, 0)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="0" y="330"/>
+</g>
+<g>
+<title>(11, 1)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="30" y="330"/>
+</g>
+<g>
+<title>(11, 2)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="60" y="330"/>
+</g>
+<g>
+<title>(11, 3)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="90" y="330"/>
+</g>
+<g>
+<title>(11, 4)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="120" y="330"/>
+</g>
+<g>
+<title>(11, 5)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="150" y="330"/>
+</g>
+<g>
+<title>(11, 6)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="180" y="330"/>
+</g>
+<g>
+<title>(11, 7)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="210" y="330"/>
+</g>
+<g>
+<title>(11, 8)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="240" y="330"/>
+</g>
+<g>
+<title>(11, 9)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="270" y="330"/>
+</g>
+<g>
+<title>(11, 10)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="300" y="330"/>
+</g>
+<g>
+<title>(11, 11)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="330" y="330"/>
+</g>
+<g>
+<title>(11, 12)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="360" y="330"/>
+</g>
+<g>
+<title>(11, 13)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="390" y="330"/>
+</g>
+<g>
+<title>(11, 14)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="420" y="330"/>
+</g>
+<g>
+<title>(11, 15)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="450" y="330"/>
+</g>
+<g>
+<title>(11, 16)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="480" y="330"/>
+</g>
+<g>
+<title>(11, 17)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="510" y="330"/>
+</g>
+<g>
+<title>(11, 18)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="540" y="330"/>
+</g>
+<g>
+<title>(11, 19)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="570" y="330"/>
+</g>
+<g>
+<title>(12, 0)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="0" y="360"/>
+</g>
+<g>
+<title>(12, 1)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="30" y="360"/>
+</g>
+<g>
+<title>(12, 2)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="60" y="360"/>
+</g>
+<g>
+<title>(12, 3)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="90" y="360"/>
+</g>
+<g>
+<title>(12, 4)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="120" y="360"/>
+</g>
+<g>
+<title>(12, 5)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="150" y="360"/>
+</g>
+<g>
+<title>(12, 6)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="180" y="360"/>
+</g>
+<g>
+<title>(12, 7)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="210" y="360"/>
+</g>
+<g>
+<title>(12, 8)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="240" y="360"/>
+</g>
+<g>
+<title>(12, 9)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="270" y="360"/>
+</g>
+<g>
+<title>(12, 10)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="300" y="360"/>
+</g>
+<g>
+<title>(12, 11)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="330" y="360"/>
+</g>
+<g>
+<title>(12, 12)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="360" y="360"/>
+</g>
+<g>
+<title>(12, 13)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="390" y="360"/>
+</g>
+<g>
+<title>(12, 14)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="420" y="360"/>
+</g>
+<g>
+<title>(12, 15)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="450" y="360"/>
+</g>
+<g>
+<title>(12, 16)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="480" y="360"/>
+</g>
+<g>
+<title>(12, 17)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="510" y="360"/>
+</g>
+<g>
+<title>(12, 18)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="540" y="360"/>
+</g>
+<g>
+<title>(12, 19)
+c = 0</title>
+<rect fill="#1e90ff" height="30" width="30" x="570" y="360"/>
+</g>
+<g>
+<title>(13, 0)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="0" y="390"/>
+</g>
+<g>
+<title>(13, 1)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="30" y="390"/>
+</g>
+<g>
+<title>(13, 2)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="60" y="390"/>
+</g>
+<g>
+<title>(13, 3)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="90" y="390"/>
+</g>
+<g>
+<title>(13, 4)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="120" y="390"/>
+</g>
+<g>
+<title>(13, 5)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="150" y="390"/>
+</g>
+<g>
+<title>(13, 6)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="180" y="390"/>
+</g>
+<g>
+<title>(13, 7)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="210" y="390"/>
+</g>
+<g>
+<title>(13, 8)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="240" y="390"/>
+</g>
+<g>
+<title>(13, 9)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="270" y="390"/>
+</g>
+<g>
+<title>(13, 10)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="300" y="390"/>
+</g>
+<g>
+<title>(13, 11)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="330" y="390"/>
+</g>
+<g>
+<title>(13, 12)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="360" y="390"/>
+</g>
+<g>
+<title>(13, 13)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="390" y="390"/>
+</g>
+<g>
+<title>(13, 14)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="420" y="390"/>
+</g>
+<g>
+<title>(13, 15)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="450" y="390"/>
+</g>
+<g>
+<title>(13, 16)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="480" y="390"/>
+</g>
+<g>
+<title>(13, 17)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="510" y="390"/>
+</g>
+<g>
+<title>(13, 18)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="540" y="390"/>
+</g>
+<g>
+<title>(13, 19)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="570" y="390"/>
+</g>
+<g>
+<title>(14, 0)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="0" y="420"/>
+</g>
+<g>
+<title>(14, 1)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="30" y="420"/>
+</g>
+<g>
+<title>(14, 2)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="60" y="420"/>
+</g>
+<g>
+<title>(14, 3)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="90" y="420"/>
+</g>
+<g>
+<title>(14, 4)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="120" y="420"/>
+</g>
+<g>
+<title>(14, 5)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="150" y="420"/>
+</g>
+<g>
+<title>(14, 6)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="180" y="420"/>
+</g>
+<g>
+<title>(14, 7)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="210" y="420"/>
+</g>
+<g>
+<title>(14, 8)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="240" y="420"/>
+</g>
+<g>
+<title>(14, 9)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="270" y="420"/>
+</g>
+<g>
+<title>(14, 10)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="300" y="420"/>
+</g>
+<g>
+<title>(14, 11)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="330" y="420"/>
+</g>
+<g>
+<title>(14, 12)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="360" y="420"/>
+</g>
+<g>
+<title>(14, 13)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="390" y="420"/>
+</g>
+<g>
+<title>(14, 14)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="420" y="420"/>
+</g>
+<g>
+<title>(14, 15)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="450" y="420"/>
+</g>
+<g>
+<title>(14, 16)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="480" y="420"/>
+</g>
+<g>
+<title>(14, 17)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="510" y="420"/>
+</g>
+<g>
+<title>(14, 18)
+c = 0</title>
+<rect fill="#1e90ff" height="30" width="30" x="540" y="420"/>
+</g>
+<g>
+<title>(14, 19)
+c = 0</title>
+<rect fill="#1e90ff" height="30" width="30" x="570" y="420"/>
+</g>
+<g>
+<title>(15, 0)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="0" y="450"/>
+</g>
+<g>
+<title>(15, 1)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="30" y="450"/>
+</g>
+<g>
+<title>(15, 2)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="60" y="450"/>
+</g>
+<g>
+<title>(15, 3)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="90" y="450"/>
+</g>
+<g>
+<title>(15, 4)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="120" y="450"/>
+</g>
+<g>
+<title>(15, 5)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="150" y="450"/>
+</g>
+<g>
+<title>(15, 6)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="180" y="450"/>
+</g>
+<g>
+<title>(15, 7)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="210" y="450"/>
+</g>
+<g>
+<title>(15, 8)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="240" y="450"/>
+</g>
+<g>
+<title>(15, 9)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="270" y="450"/>
+</g>
+<g>
+<title>(15, 10)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="300" y="450"/>
+</g>
+<g>
+<title>(15, 11)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="330" y="450"/>
+</g>
+<g>
+<title>(15, 12)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="360" y="450"/>
+</g>
+<g>
+<title>(15, 13)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="390" y="450"/>
+</g>
+<g>
+<title>(15, 14)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="420" y="450"/>
+</g>
+<g>
+<title>(15, 15)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="450" y="450"/>
+</g>
+<g>
+<title>(15, 16)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="480" y="450"/>
+</g>
+<g>
+<title>(15, 17)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="510" y="450"/>
+</g>
+<g>
+<title>(15, 18)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="540" y="450"/>
+</g>
+<g>
+<title>(15, 19)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="570" y="450"/>
+</g>
+<g>
+<title>(16, 0)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="0" y="480"/>
+</g>
+<g>
+<title>(16, 1)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="30" y="480"/>
+</g>
+<g>
+<title>(16, 2)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="60" y="480"/>
+</g>
+<g>
+<title>(16, 3)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="90" y="480"/>
+</g>
+<g>
+<title>(16, 4)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="120" y="480"/>
+</g>
+<g>
+<title>(16, 5)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="150" y="480"/>
+</g>
+<g>
+<title>(16, 6)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="180" y="480"/>
+</g>
+<g>
+<title>(16, 7)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="210" y="480"/>
+</g>
+<g>
+<title>(16, 8)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="240" y="480"/>
+</g>
+<g>
+<title>(16, 9)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="270" y="480"/>
+</g>
+<g>
+<title>(16, 10)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="300" y="480"/>
+</g>
+<g>
+<title>(16, 11)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="330" y="480"/>
+</g>
+<g>
+<title>(16, 12)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="360" y="480"/>
+</g>
+<g>
+<title>(16, 13)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="390" y="480"/>
+</g>
+<g>
+<title>(16, 14)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="420" y="480"/>
+</g>
+<g>
+<title>(16, 15)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="450" y="480"/>
+</g>
+<g>
+<title>(16, 16)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="480" y="480"/>
+</g>
+<g>
+<title>(16, 17)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="510" y="480"/>
+</g>
+<g>
+<title>(16, 18)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="540" y="480"/>
+</g>
+<g>
+<title>(16, 19)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="570" y="480"/>
+</g>
+<g>
+<title>(17, 0)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="0" y="510"/>
+</g>
+<g>
+<title>(17, 1)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="30" y="510"/>
+</g>
+<g>
+<title>(17, 2)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="60" y="510"/>
+</g>
+<g>
+<title>(17, 3)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="90" y="510"/>
+</g>
+<g>
+<title>(17, 4)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="120" y="510"/>
+</g>
+<g>
+<title>(17, 5)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="150" y="510"/>
+</g>
+<g>
+<title>(17, 6)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="180" y="510"/>
+</g>
+<g>
+<title>(17, 7)
+c = 4</title>
+<rect fill="#b5b42b" height="30" width="30" x="210" y="510"/>
+</g>
+<g>
+<title>(17, 8)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="240" y="510"/>
+</g>
+<g>
+<title>(17, 9)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="270" y="510"/>
+</g>
+<g>
+<title>(17, 10)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="300" y="510"/>
+</g>
+<g>
+<title>(17, 11)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="330" y="510"/>
+</g>
+<g>
+<title>(17, 12)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="360" y="510"/>
+</g>
+<g>
+<title>(17, 13)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="390" y="510"/>
+</g>
+<g>
+<title>(17, 14)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="420" y="510"/>
+</g>
+<g>
+<title>(17, 15)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="450" y="510"/>
+</g>
+<g>
+<title>(17, 16)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="480" y="510"/>
+</g>
+<g>
+<title>(17, 17)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="510" y="510"/>
+</g>
+<g>
+<title>(17, 18)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="540" y="510"/>
+</g>
+<g>
+<title>(17, 19)
+c = 2</title>
+<rect fill="#6ada69" height="30" width="30" x="570" y="510"/>
+</g>
+<g>
+<title>(18, 0)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="0" y="540"/>
+</g>
+<g>
+<title>(18, 1)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="30" y="540"/>
+</g>
+<g>
+<title>(18, 2)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="60" y="540"/>
+</g>
+<g>
+<title>(18, 3)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="90" y="540"/>
+</g>
+<g>
+<title>(18, 4)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="120" y="540"/>
+</g>
+<g>
+<title>(18, 5)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="150" y="540"/>
+</g>
+<g>
+<title>(18, 6)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="180" y="540"/>
+</g>
+<g>
+<title>(18, 7)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="210" y="540"/>
+</g>
+<g>
+<title>(18, 8)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="240" y="540"/>
+</g>
+<g>
+<title>(18, 9)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="270" y="540"/>
+</g>
+<g>
+<title>(18, 10)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="300" y="540"/>
+</g>
+<g>
+<title>(18, 11)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="330" y="540"/>
+</g>
+<g>
+<title>(18, 12)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="360" y="540"/>
+</g>
+<g>
+<title>(18, 13)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="390" y="540"/>
+</g>
+<g>
+<title>(18, 14)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="420" y="540"/>
+</g>
+<g>
+<title>(18, 15)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="450" y="540"/>
+</g>
+<g>
+<title>(18, 16)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="480" y="540"/>
+</g>
+<g>
+<title>(18, 17)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="510" y="540"/>
+</g>
+<g>
+<title>(18, 18)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="540" y="540"/>
+</g>
+<g>
+<title>(18, 19)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="570" y="540"/>
+</g>
+<g>
+<title>(19, 0)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="0" y="570"/>
+</g>
+<g>
+<title>(19, 1)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="30" y="570"/>
+</g>
+<g>
+<title>(19, 2)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="60" y="570"/>
+</g>
+<g>
+<title>(19, 3)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="90" y="570"/>
+</g>
+<g>
+<title>(19, 4)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="120" y="570"/>
+</g>
+<g>
+<title>(19, 5)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="150" y="570"/>
+</g>
+<g>
+<title>(19, 6)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="180" y="570"/>
+</g>
+<g>
+<title>(19, 7)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="210" y="570"/>
+</g>
+<g>
+<title>(19, 8)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="240" y="570"/>
+</g>
+<g>
+<title>(19, 9)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="270" y="570"/>
+</g>
+<g>
+<title>(19, 10)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="300" y="570"/>
+</g>
+<g>
+<title>(19, 11)
+c = 1</title>
+<rect fill="#44b5b4" height="30" width="30" x="330" y="570"/>
+</g>
+<g>
+<title>(19, 12)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="360" y="570"/>
+</g>
+<g>
+<title>(19, 13)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="390" y="570"/>
+</g>
+<g>
+<title>(19, 14)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="420" y="570"/>
+</g>
+<g>
+<title>(19, 15)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="450" y="570"/>
+</g>
+<g>
+<title>(19, 16)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="480" y="570"/>
+</g>
+<g>
+<title>(19, 17)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="510" y="570"/>
+</g>
+<g>
+<title>(19, 18)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="540" y="570"/>
+</g>
+<g>
+<title>(19, 19)
+c = 3</title>
+<rect fill="#90ff1e" height="30" width="30" x="570" y="570"/>
+</g>
+<line stroke="black" stroke-width="2" x1="0" x2="600" y1="0" y2="0"/>
+<line stroke="black" stroke-width="2" x1="0" x2="0" y1="0" y2="600"/>
+<line stroke="lightgray" stroke-width="1" x1="0" x2="600" y1="30" y2="30"/>
+<line stroke="lightgray" stroke-width="1" x1="30" x2="30" y1="0" y2="600"/>
+<line stroke="lightgray" stroke-width="1" x1="0" x2="600" y1="60" y2="60"/>
+<line stroke="lightgray" stroke-width="1" x1="60" x2="60" y1="0" y2="600"/>
+<line stroke="lightgray" stroke-width="1" x1="0" x2="600" y1="90" y2="90"/>
+<line stroke="lightgray" stroke-width="1" x1="90" x2="90" y1="0" y2="600"/>
+<line stroke="lightgray" stroke-width="1" x1="0" x2="600" y1="120" y2="120"/>
+<line stroke="lightgray" stroke-width="1" x1="120" x2="120" y1="0" y2="600"/>
+<line stroke="lightgray" stroke-width="1" x1="0" x2="600" y1="150" y2="150"/>
+<line stroke="lightgray" stroke-width="1" x1="150" x2="150" y1="0" y2="600"/>
+<line stroke="lightgray" stroke-width="1" x1="0" x2="600" y1="180" y2="180"/>
+<line stroke="lightgray" stroke-width="1" x1="180" x2="180" y1="0" y2="600"/>
+<line stroke="lightgray" stroke-width="1" x1="0" x2="600" y1="210" y2="210"/>
+<line stroke="lightgray" stroke-width="1" x1="210" x2="210" y1="0" y2="600"/>
+<line stroke="lightgray" stroke-width="1" x1="0" x2="600" y1="240" y2="240"/>
+<line stroke="lightgray" stroke-width="1" x1="240" x2="240" y1="0" y2="600"/>
+<line stroke="lightgray" stroke-width="1" x1="0" x2="600" y1="270" y2="270"/>
+<line stroke="lightgray" stroke-width="1" x1="270" x2="270" y1="0" y2="600"/>
+<line stroke="lightgray" stroke-width="1" x1="0" x2="600" y1="300" y2="300"/>
+<line stroke="lightgray" stroke-width="1" x1="300" x2="300" y1="0" y2="600"/>
+<line stroke="lightgray" stroke-width="1" x1="0" x2="600" y1="330" y2="330"/>
+<line stroke="lightgray" stroke-width="1" x1="330" x2="330" y1="0" y2="600"/>
+<line stroke="lightgray" stroke-width="1" x1="0" x2="600" y1="360" y2="360"/>
+<line stroke="lightgray" stroke-width="1" x1="360" x2="360" y1="0" y2="600"/>
+<line stroke="lightgray" stroke-width="1" x1="0" x2="600" y1="390" y2="390"/>
+<line stroke="lightgray" stroke-width="1" x1="390" x2="390" y1="0" y2="600"/>
+<line stroke="lightgray" stroke-width="1" x1="0" x2="600" y1="420" y2="420"/>
+<line stroke="lightgray" stroke-width="1" x1="420" x2="420" y1="0" y2="600"/>
+<line stroke="lightgray" stroke-width="1" x1="0" x2="600" y1="450" y2="450"/>
+<line stroke="lightgray" stroke-width="1" x1="450" x2="450" y1="0" y2="600"/>
+<line stroke="lightgray" stroke-width="1" x1="0" x2="600" y1="480" y2="480"/>
+<line stroke="lightgray" stroke-width="1" x1="480" x2="480" y1="0" y2="600"/>
+<line stroke="lightgray" stroke-width="1" x1="0" x2="600" y1="510" y2="510"/>
+<line stroke="lightgray" stroke-width="1" x1="510" x2="510" y1="0" y2="600"/>
+<line stroke="lightgray" stroke-width="1" x1="0" x2="600" y1="540" y2="540"/>
+<line stroke="lightgray" stroke-width="1" x1="540" x2="540" y1="0" y2="600"/>
+<line stroke="lightgray" stroke-width="1" x1="0" x2="600" y1="570" y2="570"/>
+<line stroke="lightgray" stroke-width="1" x1="570" x2="570" y1="0" y2="600"/>
+<line stroke="black" stroke-width="2" x1="0" x2="600" y1="600" y2="600"/>
+<line stroke="black" stroke-width="2" x1="600" x2="600" y1="0" y2="600"/>
+<line stroke="black" stroke-width="2" x1="180" x2="180" y1="0" y2="30"/>
+<line stroke="black" stroke-width="2" x1="360" x2="360" y1="0" y2="30"/>
+<line stroke="black" stroke-width="2" x1="360" x2="360" y1="30" y2="60"/>
+<line stroke="black" stroke-width="2" x1="0" x2="30" y1="180" y2="180"/>
+<line stroke="black" stroke-width="2" x1="30" x2="60" y1="180" y2="180"/>
+<line stroke="black" stroke-width="2" x1="60" x2="90" y1="180" y2="180"/>
+<line stroke="black" stroke-width="2" x1="90" x2="120" y1="180" y2="180"/>
+<line stroke="black" stroke-width="2" x1="120" x2="150" y1="180" y2="180"/>
+<line stroke="black" stroke-width="2" x1="150" x2="180" y1="180" y2="180"/>
+<line stroke="black" stroke-width="2" x1="180" x2="210" y1="180" y2="180"/>
+<line stroke="black" stroke-width="2" x1="210" x2="240" y1="180" y2="180"/>
+<line stroke="black" stroke-width="2" x1="240" x2="270" y1="180" y2="180"/>
+<line stroke="black" stroke-width="2" x1="270" x2="300" y1="180" y2="180"/>
+<line stroke="black" stroke-width="2" x1="300" x2="330" y1="180" y2="180"/>
+<line stroke="black" stroke-width="2" x1="330" x2="360" y1="180" y2="180"/>
+<line stroke="black" stroke-width="2" x1="360" x2="390" y1="180" y2="180"/>
+<line stroke="black" stroke-width="2" x1="390" x2="420" y1="180" y2="180"/>
+<line stroke="black" stroke-width="2" x1="420" x2="450" y1="180" y2="180"/>
+<line stroke="black" stroke-width="2" x1="450" x2="480" y1="180" y2="180"/>
+<line stroke="black" stroke-width="2" x1="240" x2="270" y1="330" y2="330"/>
+<line stroke="black" stroke-width="2" x1="270" x2="300" y1="330" y2="330"/>
+<line stroke="black" stroke-width="2" x1="300" x2="330" y1="330" y2="330"/>
+<line stroke="black" stroke-width="2" x1="330" x2="360" y1="330" y2="330"/>
+<line stroke="black" stroke-width="2" x1="360" x2="390" y1="330" y2="330"/>
+<line stroke="black" stroke-width="2" x1="390" x2="420" y1="330" y2="330"/>
+<line stroke="black" stroke-width="2" x1="420" x2="450" y1="330" y2="330"/>
+<line stroke="black" stroke-width="2" x1="450" x2="480" y1="330" y2="330"/>
+<line stroke="black" stroke-width="2" x1="480" x2="510" y1="330" y2="330"/>
+<line stroke="black" stroke-width="2" x1="510" x2="540" y1="330" y2="330"/>
+<line stroke="black" stroke-width="2" x1="540" x2="570" y1="330" y2="330"/>
+<line stroke="black" stroke-width="2" x1="570" x2="600" y1="330" y2="330"/>
+<line stroke="black" stroke-width="2" x1="60" x2="90" y1="360" y2="360"/>
+<line stroke="black" stroke-width="2" x1="90" x2="120" y1="360" y2="360"/>
+<line stroke="black" stroke-width="2" x1="120" x2="150" y1="360" y2="360"/>
+<line stroke="black" stroke-width="2" x1="150" x2="180" y1="360" y2="360"/>
+<line stroke="black" stroke-width="2" x1="180" x2="210" y1="360" y2="360"/>
+<line stroke="black" stroke-width="2" x1="210" x2="240" y1="360" y2="360"/>
+<line stroke="black" stroke-width="2" x1="240" x2="270" y1="360" y2="360"/>
+<line stroke="black" stroke-width="2" x1="270" x2="300" y1="360" y2="360"/>
+<line stroke="black" stroke-width="2" x1="300" x2="330" y1="360" y2="360"/>
+<line stroke="black" stroke-width="2" x1="330" x2="360" y1="360" y2="360"/>
+<line stroke="black" stroke-width="2" x1="360" x2="390" y1="360" y2="360"/>
+<line stroke="black" stroke-width="2" x1="390" x2="420" y1="360" y2="360"/>
+<line stroke="black" stroke-width="2" x1="420" x2="450" y1="360" y2="360"/>
+<line stroke="black" stroke-width="2" x1="450" x2="480" y1="360" y2="360"/>
+<line stroke="black" stroke-width="2" x1="480" x2="510" y1="360" y2="360"/>
+<line stroke="black" stroke-width="2" x1="510" x2="540" y1="360" y2="360"/>
+<line stroke="black" stroke-width="2" x1="540" x2="570" y1="360" y2="360"/>
+<line stroke="black" stroke-width="2" x1="570" x2="600" y1="360" y2="360"/>
+<line stroke="black" stroke-width="2" x1="30" x2="60" y1="420" y2="420"/>
+<line stroke="black" stroke-width="2" x1="60" x2="90" y1="420" y2="420"/>
+<line stroke="black" stroke-width="2" x1="90" x2="120" y1="420" y2="420"/>
+<line stroke="black" stroke-width="2" x1="120" x2="150" y1="420" y2="420"/>
+<line stroke="black" stroke-width="2" x1="150" x2="180" y1="420" y2="420"/>
+<line stroke="black" stroke-width="2" x1="180" x2="210" y1="420" y2="420"/>
+<line stroke="black" stroke-width="2" x1="210" x2="240" y1="420" y2="420"/>
+<line stroke="black" stroke-width="2" x1="240" x2="270" y1="420" y2="420"/>
+<line stroke="black" stroke-width="2" x1="270" x2="300" y1="420" y2="420"/>
+<line stroke="black" stroke-width="2" x1="300" x2="330" y1="420" y2="420"/>
+<line stroke="black" stroke-width="2" x1="330" x2="360" y1="420" y2="420"/>
+<line stroke="black" stroke-width="2" x1="360" x2="390" y1="420" y2="420"/>
+<line stroke="black" stroke-width="2" x1="390" x2="420" y1="420" y2="420"/>
+<line stroke="black" stroke-width="2" x1="420" x2="450" y1="420" y2="420"/>
+<line stroke="black" stroke-width="2" x1="450" x2="480" y1="420" y2="420"/>
+<line stroke="black" stroke-width="2" x1="480" x2="510" y1="420" y2="420"/>
+<line stroke="black" stroke-width="2" x1="510" x2="540" y1="420" y2="420"/>
+<line stroke="black" stroke-width="2" x1="540" x2="570" y1="420" y2="420"/>
+<line stroke="black" stroke-width="2" x1="570" x2="600" y1="420" y2="420"/>
+<line stroke="black" stroke-width="2" x1="90" x2="90" y1="420" y2="450"/>
+<line stroke="black" stroke-width="2" x1="270" x2="270" y1="420" y2="450"/>
+<line stroke="black" stroke-width="2" x1="90" x2="90" y1="450" y2="480"/>
+<line stroke="black" stroke-width="2" x1="270" x2="270" y1="450" y2="480"/>
+<line stroke="black" stroke-width="2" x1="90" x2="90" y1="480" y2="510"/>
+<line stroke="black" stroke-width="2" x1="270" x2="270" y1="480" y2="510"/>
+<line stroke="black" stroke-width="2" x1="90" x2="90" y1="510" y2="540"/>
+<line stroke="black" stroke-width="2" x1="270" x2="270" y1="510" y2="540"/>
+<line stroke="black" stroke-width="2" x1="330" x2="330" y1="510" y2="540"/>
+<line stroke="black" stroke-width="2" x1="330" x2="330" y1="540" y2="570"/>
+<line stroke="black" stroke-width="2" x1="180" x2="180" y1="570" y2="600"/>
+<line stroke="black" stroke-width="2" x1="330" x2="330" y1="570" y2="600"/>
+<use fill="#000000a0" height="30" href="#flag" width="30" x="120" y="60"/>
+<use height="22" href="#robot" width="22" x="573" y="33"/>
+</svg></body></html>
