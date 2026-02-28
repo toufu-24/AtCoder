@@ -56,7 +56,9 @@ int32_t main() {
 
         int ans = 0;
         auto g = four_con.groups();
-        for (auto con : g) {
+        for (const auto &con : g) {
+            if (!four[con[0]])
+                continue;
             // https://qiita.com/nomikura/items/a4c5be6c72ce854d7ce4
             // treeDFS(親, 現在地, 根から現在地までの距離, 根からの最大の距離, 根から最大の距離となる頂点
             auto dfs = [&](auto dfs, int from, int current, int dist, int &maxDist, int &maxVertex) -> void {
@@ -99,6 +101,11 @@ int32_t main() {
             dfs(dfs, -1, start, 0, maxDist, end);
 
             ans = max(ans, maxDist);
+        }
+        for (auto [u, v] : edges) {
+            if (three[u] && three[v]) {
+                ans = max(ans, 1L);
+            }
         }
         cout << ans + 1 << '\n';
     }
