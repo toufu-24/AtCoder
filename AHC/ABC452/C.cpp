@@ -1,0 +1,56 @@
+#include <bits/stdc++.h>
+#include <atcoder/all>
+using namespace std;
+using namespace atcoder;
+
+#define all(v) v.begin(), v.end()
+#define SORT(v) sort(v.begin(), v.end())
+#define RSORT(v) sort(v.rbegin(), v.rend())
+#define REVERSE(v) reverse(v.begin(), v.end())
+#define ll long
+#define ld long double
+
+#define int ll
+
+int32_t main() {
+    int n;
+    cin >> n;
+    vector<int> a(n), b(n);
+    for (int i = 0; i < n; i++) {
+        cin >> a[i] >> b[i];
+        b[i]--;
+        // cerr << a[i] << " " << b[i] << endl;
+    }
+    // cerr << "in" << endl;
+
+    int m;
+    cin >> m;
+    vector<string> s(m);
+    // ながさ，位置，code
+    vector cnt(100, vector(100, vector<bool>(100, false)));
+    for (int i = 0; i < m; i++) {
+        cin >> s[i];
+        // cerr << "hoge";
+        for (int j = 0; j < s[i].size(); j++) {
+            cnt[s[i].size()][j][s[i][j] - 'a'] = true;
+        }
+    }
+
+    for (int i = 0; i < m; i++) {
+        bool ok = true;
+        // 長さ a[j] で ｂ[j] 文字目が s[i][j]であるようなものが存在するか
+        if (n != s[i].size()) {
+            cout << "No" << endl;
+            continue;
+        }
+        for (int j = 0; j < s[i].size(); j++) {
+            ok &= (cnt[a[j]][b[j]][s[i][j] - 'a']);
+        }
+
+        if (ok) {
+            cout << "Yes" << endl;
+        } else {
+            cout << "No" << endl;
+        }
+    }
+}
